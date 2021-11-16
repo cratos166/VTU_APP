@@ -3,4 +3,18 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
 
+
+    <string name="interstitialAd_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="bannerID">ca-app-pub-3940256099942544/6300978111</string>
+
+
+
+    <!--Live Banner : ca-app-pub-2384938955607297/5465537023-->
+    <!--Live interstitialAd_id : ca-app-pub-2384938955607297/2735431907-->
+
+    <!--DEMO Banner : ca-app-pub-3940256099942544/6300978111-->
+    <!--DEMO interstitialAd_id : ca-app-pub-3940256099942544/1033173712-->
+
+
+
 </resources>

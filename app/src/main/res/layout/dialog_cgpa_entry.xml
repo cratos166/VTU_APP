@@ -45,13 +45,15 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
-                app:lottie_rawRes="@raw/animleadership"
+                app:lottie_rawRes="@raw/edit1"
                 app:lottie_speed="1" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+               android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
                 android:fontFamily="@font/ubuntu_bold"
                 android:gravity="left"
                 android:text="Enter Your SGPA"
@@ -100,6 +102,9 @@
                             android:id="@+id/t1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -122,6 +127,9 @@
                             android:id="@+id/t2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -155,6 +163,9 @@
                             android:id="@+id/t3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -177,6 +188,9 @@
                             android:id="@+id/t4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -209,6 +223,9 @@
                             android:id="@+id/t5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -231,6 +248,9 @@
                             android:id="@+id/t6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -263,6 +283,9 @@
                             android:id="@+id/t7"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -285,10 +308,15 @@
                             android:id="@+id/t8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
                     </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
 

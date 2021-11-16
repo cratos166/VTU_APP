@@ -42,36 +42,6 @@
 
 
 
-    <item android:title="Legal"
-        android:id="@+id/nav_legal">
 
-        <menu>
-
-            <group android:checkableBehavior="single">
-
-            <item
-                android:id="@+id/nav_tos"
-                android:title="Terms of Service"
-                android:icon="@drawable/nav_legal"
-               />
-
-                <item
-                    android:id="@+id/nav_ref"
-                    android:title="Refund Policy"
-                    android:icon="@drawable/nav_legal"
-                    />
-
-                <item
-                    android:id="@+id/nav_ps"
-                    android:title="Privacy statement"
-                    android:icon="@drawable/nav_legal"
-                    />
-
-            </group>
-
-        </menu>
-
-
-    </item>
 
 </menu>

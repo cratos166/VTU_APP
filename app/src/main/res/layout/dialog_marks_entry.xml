@@ -66,7 +66,6 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Data Structure Marks"
                         android:layout_marginBottom="5dp"
                         android:textColorHint="@color/dark_outer_box"
                         tools:ignore="MissingClass">
@@ -75,6 +74,9 @@
                             android:id="@+id/t1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -86,7 +88,6 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Data Structure Marks"
                         android:layout_marginBottom="5dp"
                         android:textColorHint="@color/dark_outer_box"
                         tools:ignore="MissingClass">
@@ -95,6 +96,9 @@
                             android:id="@+id/t2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -106,7 +110,6 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Data Structure Marks"
                         android:layout_marginBottom="5dp"
                         android:textColorHint="@color/dark_outer_box"
                         tools:ignore="MissingClass">
@@ -115,6 +118,9 @@
                             android:id="@+id/t3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -126,7 +132,6 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Data Structure Marks"
                         android:layout_marginBottom="5dp"
                         android:textColorHint="@color/dark_outer_box"
                         tools:ignore="MissingClass">
@@ -135,6 +140,9 @@
                             android:id="@+id/t4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -145,7 +153,6 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Data Structure Marks"
                         android:layout_marginBottom="5dp"
                         android:textColorHint="@color/dark_outer_box"
                         tools:ignore="MissingClass">
@@ -154,6 +161,9 @@
                             android:id="@+id/t5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -165,7 +175,6 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Data Structure Marks"
                         android:layout_marginBottom="5dp"
                         android:textColorHint="@color/dark_outer_box"
                         tools:ignore="MissingClass">
@@ -174,6 +183,9 @@
                             android:id="@+id/t6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -185,7 +197,6 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Data Structure Marks"
                         android:layout_marginBottom="5dp"
                         android:textColorHint="@color/dark_outer_box"
                         tools:ignore="MissingClass">
@@ -194,6 +205,9 @@
                             android:id="@+id/t7"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 
@@ -205,7 +219,6 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Data Structure Marks"
                         android:textColorHint="@color/dark_outer_box"
                         android:layout_marginBottom="15dp"
                         tools:ignore="MissingClass">
@@ -214,6 +227,30 @@
                             android:id="@+id/t8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
+                            android:textColor="@color/text_dis" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et9"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/dark_outer_box"
+                        android:layout_marginBottom="15dp"
+                        tools:ignore="MissingClass">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/t9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:maxLength="5"
                             android:textColor="@color/text_dis" />
 
 

@@ -45,7 +45,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
-                app:lottie_rawRes="@raw/animleadership"
+                app:lottie_rawRes="@raw/a2"
                 app:lottie_speed="1" />
 
             <TextView
@@ -86,7 +86,7 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="I Sem SGPA"
+                            android:hint="Enter CGPA"
                             android:layout_marginBottom="15dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"

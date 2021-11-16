@@ -46,7 +46,7 @@
                 android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                cardview:cardCornerRadius="100dp">
+                cardview:cardCornerRadius="60dp">
 
 
                 <LinearLayout
@@ -58,7 +58,7 @@
                         android:id="@+id/propic"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/mypic"
+                        android:background="@drawable/kartikpic5"
                         />
 
                 </LinearLayout>
@@ -104,7 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="15dp"
-                    android:fontFamily="@font/ubuntu_bold"
+                    android:fontFamily="@font/ubuntu"
                     android:gravity="center"
                     android:text="I am a junior App developer and currently pursuing my UG degree. A sophomore interested enough in computers to learn coding! Here comes my 5th project. The app is a result of my curiosity of learning something new. I learnt a lot of things ranging from the technicalities to our sociability. Feel free to mail me at sachinkartik166@gmail.com. "
                     android:textColor="@color/text_head"

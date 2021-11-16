@@ -33,7 +33,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/animleadership"
+            app:lottie_rawRes="@raw/result_ans"
             app:lottie_speed="1" />
 
         <LinearLayout
@@ -123,9 +123,9 @@
                     android:gravity="center"
                     android:scaleX="0.9"
                     android:scaleY="0.9"
-                    android:text="CHECK OTHER"
+                    android:text="CHECK ANOTHER"
                     android:textColor="@color/dark_back"
-                    android:textSize="13dp"
+                    android:textSize="12dp"
                     android:textStyle="bold" />
 
 

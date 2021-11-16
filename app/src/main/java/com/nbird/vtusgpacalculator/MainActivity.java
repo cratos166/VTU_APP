@@ -22,6 +22,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -34,17 +37,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle mToggle;
     String link="https://play.google.com/store/apps/details?id=com.nbird.vtusgpacalculator";
+
+
+    InterstitialAd mInterstitialAd;
+
+
+    private void loadAds(){
+        mInterstitialAd = new InterstitialAd(MainActivity.this);
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.interstitialAd_id));
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        loadAds();
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         recyclerView=(RecyclerView) findViewById(R.id.recyclerview);
         modesList=new ArrayList<>();
         setModesList();
-        RecyclerViewAdapter myAdapter=new RecyclerViewAdapter(this,modesList);
+        RecyclerViewAdapter myAdapter=new RecyclerViewAdapter(this,modesList,mInterstitialAd);
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
         recyclerView.setAdapter(myAdapter);
@@ -74,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         Toast.makeText(MainActivity.this, "Share Me!", Toast.LENGTH_SHORT).show();
                         Intent shareIntent=new Intent(Intent.ACTION_SEND);
                         shareIntent.setType("text/plane");
-                        String shareBody="MindScape: The ultimate SGPA And CGPA Calculator!\n\n" +
+                        String shareBody="MindScape: The ultimate VTU SGPA And CGPA Calculator!\n\n" +
                                 "Download Now! \n" + link;
                         String sharesub="VTU SGPA Calculator";
 
@@ -134,10 +155,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void setModesList(){
 
-        modesList.add(new Modes("SGPA Calculator",R.raw.animleadership,"Test your knowledge and compete against time. Score points for accuracy and achieve ranks."));
-        modesList.add(new Modes("CGPA Calculator",R.raw.animleadership,"Time for the One-On-One. Compete with a rival online. Time your knowledge and be the champion."));
-        modesList.add(new Modes("VTU Results",R.raw.animleadership,"Quizzers from all over the world come together in the arena to show who's the ultimate leaderboard breaker."));
-        modesList.add(new Modes("Percentage",R.raw.animleadership,"Test your visual skills and ace your pictorial predicts. Compete in single mode or join the online multiplayer."));
+        modesList.add(new Modes("SGPA Calculator",R.raw.sgpa_cal,"Select your branch and sem and then enter all the marks for the respective subjects ."));
+        modesList.add(new Modes("CGPA Calculator",R.raw.cgpa_cal,"Enter all the semester SGPA in the Edit TextView till given to get the CGPA."));
+        modesList.add(new Modes("VTU Results",R.raw.result,"Click on this tab to get the VTU results which automatically redirects you to the VTU Website."));
+        modesList.add(new Modes("Percentage",R.raw.a5,"Enter your CGPA in the Edit TextView till given to get the Percentage."));
 
     }
 
