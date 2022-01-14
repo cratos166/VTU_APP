@@ -1,7 +1,6 @@
 package com.nbird.vtusgpacalculator;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,9 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,6 +27,12 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.material.navigation.NavigationView;
 
+import org.json.JSONArray;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     InterstitialAd mInterstitialAd;
-
+    DownloadTask task;
 
     private void loadAds(){
         mInterstitialAd = new InterstitialAd(MainActivity.this);
@@ -59,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         loadAds();
+
+
+
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -150,6 +159,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         navigationView.setCheckedItem(R.id.nav_view);
+        task = new DownloadTask();
+        task.execute("https://vtu-env.8qfehg4wsq.us-west-2.elasticbeanstalk.com/api/1mv19is034/2/");
 
     }
 
@@ -158,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         modesList.add(new Modes("SGPA Calculator",R.raw.sgpa_cal,"Select your branch and sem and then enter all the marks for the respective subjects ."));
         modesList.add(new Modes("CGPA Calculator",R.raw.cgpa_cal,"Enter all the semester SGPA in the Edit TextView till given to get the CGPA."));
         modesList.add(new Modes("VTU Results",R.raw.result,"Click on this tab to get the VTU results which automatically redirects you to the VTU Website."));
-        modesList.add(new Modes("Percentage",R.raw.a5,"Enter your CGPA in the Edit TextView till given to get the Percentage."));
+        modesList.add(new Modes("Percentage",R.raw.percentage,"Enter your CGPA in the Edit TextView till given to get the Percentage."));
 
     }
 
@@ -184,4 +195,55 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
+
+    public class DownloadTask extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... urls) {
+            String result = "";
+            URL url;
+            HttpURLConnection urlConnection = null;
+
+            try {
+                url = new URL(urls[0]);
+                urlConnection = (HttpURLConnection) url.openConnection();
+                InputStream in = urlConnection.getInputStream();
+                InputStreamReader reader = new InputStreamReader(in);
+                int data = reader.read();
+                while (data != -1) {
+                    char current = (char) data;
+                    result += current;
+                    data = reader.read();
+                }
+                return result;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            try {
+
+                Log.d("Response",s);
+
+                JSONArray jsonarray = new JSONArray(s);
+
+
+
+
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+
+                Toast.makeText(getApplicationContext(), "Data Not Available", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+
 }
