@@ -66,11 +66,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder( final MyViewHolder holder, final int position) {
 
+        switch (position){
+            case 2:
+                holder.head.setTextSize(15);
+                holder.dis.setTextSize(11);
+        }
+
         holder.head.setText(mData.get(position).getTitle());
         try{
             holder.anim.setAnimation(mData.get(position).getThumbnail());
         }catch (Exception e){
-
+          e.printStackTrace();
         }
 
         holder.dis.setText(mData.get(position).getDis());
@@ -88,10 +94,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     case 1:
                         cgpaCalculatorAlertDialog(v);break;
 
-                    case 2:
+                    case 3:
                         Intent browserIntenttos = new Intent(Intent.ACTION_VIEW, Uri.parse("https://results.vtu.ac.in/JAEcbcs/index.php"));
                         mContext.startActivity(browserIntenttos);break;
-                    case 3:
+                    case 4:
                         percentageAlertDialog(v);break;
 
                 }

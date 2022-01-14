@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     InterstitialAd mInterstitialAd;
-    DownloadTask task;
+
 
     private void loadAds(){
         mInterstitialAd = new InterstitialAd(MainActivity.this);
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         Toast.makeText(MainActivity.this, "Share Me!", Toast.LENGTH_SHORT).show();
                         Intent shareIntent=new Intent(Intent.ACTION_SEND);
                         shareIntent.setType("text/plane");
-                        String shareBody="MindScape: The ultimate VTU SGPA And CGPA Calculator!\n\n" +
+                        String shareBody="The ultimate VTU SGPA And CGPA Calculator!\n\n" +
                                 "Download Now! \n" + link;
                         String sharesub="VTU SGPA Calculator";
 
@@ -159,8 +159,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         navigationView.setCheckedItem(R.id.nav_view);
-        task = new DownloadTask();
-        task.execute("https://vtu-env.8qfehg4wsq.us-west-2.elasticbeanstalk.com/api/1mv19is034/2/");
 
     }
 
@@ -168,6 +166,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         modesList.add(new Modes("SGPA Calculator",R.raw.sgpa_cal,"Select your branch and sem and then enter all the marks for the respective subjects ."));
         modesList.add(new Modes("CGPA Calculator",R.raw.cgpa_cal,"Enter all the semester SGPA in the Edit TextView till given to get the CGPA."));
+        modesList.add(new Modes("Semester Scheme",R.raw.scheme,"By Selecting A Particular Branch You Will Be Directed To The PDF, Where You Will Be Provided With VTU Official Scheme."));
         modesList.add(new Modes("VTU Results",R.raw.result,"Click on this tab to get the VTU results which automatically redirects you to the VTU Website."));
         modesList.add(new Modes("Percentage",R.raw.percentage,"Enter your CGPA in the Edit TextView till given to get the Percentage."));
 
@@ -196,54 +195,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    public class DownloadTask extends AsyncTask<String, Void, String> {
-
-        @Override
-        protected String doInBackground(String... urls) {
-            String result = "";
-            URL url;
-            HttpURLConnection urlConnection = null;
-
-            try {
-                url = new URL(urls[0]);
-                urlConnection = (HttpURLConnection) url.openConnection();
-                InputStream in = urlConnection.getInputStream();
-                InputStreamReader reader = new InputStreamReader(in);
-                int data = reader.read();
-                while (data != -1) {
-                    char current = (char) data;
-                    result += current;
-                    data = reader.read();
-                }
-                return result;
-            } catch (Exception e) {
-                e.printStackTrace();
-                return null;
-            }
-
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            try {
-
-                Log.d("Response",s);
-
-                JSONArray jsonarray = new JSONArray(s);
-
-
-
-
-
-
-            } catch (Exception e) {
-                e.printStackTrace();
-
-                Toast.makeText(getApplicationContext(), "Data Not Available", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
 
 
 }
