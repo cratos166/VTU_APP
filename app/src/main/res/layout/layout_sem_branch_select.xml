@@ -58,7 +58,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
+                android:gravity="center"
                 android:weightSum="2"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -74,11 +75,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:fontFamily="@font/ubuntu_bold"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:text="Branch"
                         android:textColor="@color/text_dis"
                         android:textSize="16dp"
@@ -88,11 +89,12 @@
                     <Spinner
                         android:id="@+id/spinnerBranch"
                         style="@style/Widget.AppCompat.Light.DropDownItem.Spinner"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@android:drawable/btn_dropdown"
                         android:backgroundTint="@color/dark_border_stroke"
                         android:focusable="true"
+                        android:layout_gravity="center"
                         android:focusableInTouchMode="true"
                         android:popupBackground="@color/dark_inner_box"
                         android:spinnerMode="dropdown"
@@ -110,11 +112,11 @@
 
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:fontFamily="@font/ubuntu_bold"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:text="Semester"
                         android:textColor="@color/text_dis"
                         android:textSize="16dp"
@@ -124,9 +126,10 @@
                     <Spinner
                         android:id="@+id/spinnerSem"
                         style="@style/Widget.AppCompat.Light.DropDownItem.Spinner"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:layout_gravity="center"
                         android:background="@android:drawable/btn_dropdown"
                         android:backgroundTint="@color/dark_border_stroke"
                         android:focusable="true"

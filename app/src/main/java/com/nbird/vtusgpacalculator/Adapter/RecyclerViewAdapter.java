@@ -12,11 +12,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -37,10 +39,8 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
     private Context mContext;
     private List<Modes> mData;
-    private static final String[] branchArr = {"CSE", "ISE", "ECE", "ME", "EEE", "ETE", "CIVIL","BTE"};
-    private static final String[] semArr = {"I","II","III","IV","V","VI","VII","VIII"};
-    int selectedBranch=0;
-    int selectedSem=0;
+
+
 
     private InterstitialAd mInterstitialAd;
 
@@ -84,6 +84,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.dis.setText(mData.get(position).getDis());
 
 
+        /*
+          FLAG : 0 -> CGPA CALCULATOR
+          FLAG : 1 -> PORTION
+        */
+
 
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +96,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 switch (position){
                     case 0:
-                        branchAndSemeterAlertDialog(v);break;
+                        String[] branchArr = {"CSE", "ISE", "ECE", "ME", "EEE", "ETE", "CIVIL","BTE"};
+                        String[] semArr = {"I","II","III","IV","V","VI","VII","VIII"};
+                        branchAndSemeterAlertDialog(v,branchArr,semArr,0);break;
+                    case 1:
+                        String[] branchPortionArr = {"First Year", "Aeronautical Engineering", "Aerospace Engineering",
+                                "Architecture", "Automobile Engineering", "Biomedical Engineering", "Biotechnology",
+                                "Chemical Engineering","Civil Engineering", "Computer Science & Engineering",
+                                "Electrical & Electronics Engineering", "Electronics & Communication Engineering",
+                                "Electronics & Instrumentation Engineering","Electronics & Telecommunication Engineering",
+                                "Industrial & Production Engineering", "Industrial Engineering & Management", "Information Science & Engineering",
+                                "Manufacturing Science & Engineering","Marine Engineering", "Mechanical Engineering", "Mechatronics", "Medical Electronics",
+                                "Mining Engineering","Nano Technology", "Petrochem Engineering"};
+                        String[] semPortionArr = {"I","II","III","IV","V","VI","VII","VIII"};
+                        branchAndSemeterAlertDialog(v,branchPortionArr,semPortionArr,1);break;
                     case 2:
                         cgpaCalculatorAlertDialog(v);break;
                     case 3:
@@ -137,9 +155,49 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-    private void portionBranchAndSemSelector(){
+    private void portionSubjectsAlertDialog(View v, int selectedBranch, int selectedSem){
+        AlertDialog.Builder builder=new AlertDialog.Builder(mContext,R.style.AlertDialogTheme);
+
+        final View view1= LayoutInflater.from(mContext).inflate(R.layout.dialog_scheme_list,(ConstraintLayout) v.findViewById(R.id.layoutDialogContainer));
+        builder.setView(view1);
+        builder.setCancelable(true);
+
+        RecyclerView  recyclerViewSubjects=(RecyclerView) view1.findViewById(R.id.recyclerview);
+        List<String> subjectList=new ArrayList<>();
+
+
+
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
+//        linearLayoutManager.setOrientation(recyclerViewSubjects.VERTICAL);
+//        recyclerViewSubjects.setLayoutManager(linearLayoutManager);
+//
+//        subjectList = new ArrayList<>();
+//
+//
+//        SubjectAdapter categoryAdapter = new SubjectAdapter(mContext,datasubjectAdder(subjectList,selectedBranch,selectedSem));
+//        recyclerViewSubjects.setAdapter(categoryAdapter);
+//
+
+
+        final AlertDialog alertDialog=builder.create();
+        if(alertDialog.getWindow()!=null){
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+        try{
+            alertDialog.show();
+        }catch (Exception e){
+
+        }
+
 
     }
+
+
+//    private List<String> datasubjectAdder(List<String> subjectList, int selectedBranch, int selectedSem){
+//
+//
+//
+//    }
 
 
     private void schemeListView(View v){
@@ -427,7 +485,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         }else if(i==3){
                             percentageAlertDialog(v);
                         }else if(i==1){
-                            branchAndSemeterAlertDialog(v);
+                            String[] branchArr = {"CSE", "ISE", "ECE", "ME", "EEE", "ETE", "CIVIL","BTE"};
+                            String[] semArr = {"I","II","III","IV","V","VI","VII","VIII"};
+                            branchAndSemeterAlertDialog(v, branchArr, semArr,0);
                         }
                     }
 
@@ -445,7 +505,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }else if(i==3){
                     percentageAlertDialog(v);
                 }else if(i==1){
-                    branchAndSemeterAlertDialog(v);
+                    String[] branchArr = {"CSE", "ISE", "ECE", "ME", "EEE", "ETE", "CIVIL","BTE"};
+                    String[] semArr = {"I","II","III","IV","V","VI","VII","VIII"};
+                    branchAndSemeterAlertDialog(v, branchArr, semArr,0);
                 }
 
             }
@@ -470,8 +532,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return marks;
     }
 
-   private void branchAndSemeterAlertDialog(View v){
+   private void branchAndSemeterAlertDialog(View v, String[] branchArr, String[] semArr,int flag){
 
+
+        int[] selectedBranch = {0};
+        int[] selectedSem = {0};
 
 
        AlertDialog.Builder builder=new AlertDialog.Builder(mContext,R.style.AlertDialogTheme);
@@ -497,7 +562,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
        spinnerBranch.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
            @Override
            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               selectedBranch=position;
+               selectedBranch[0] =position;
            }
 
            @Override
@@ -510,7 +575,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
        spinnerSem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
            @Override
            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               selectedSem=position;
+               selectedSem[0] =position;
            }
 
            @Override
@@ -533,7 +598,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
            @Override
            public void onClick(View v) {
                alertDialog.cancel();
-               marksEntryAlertDialog(v,selectedBranch,selectedSem);
+               if(flag==0){
+                   marksEntryAlertDialog(v, selectedBranch[0], selectedSem[0]);
+               }else if(flag==1){
+                   portionSubjectsAlertDialog(v,selectedBranch[0], selectedSem[0]);
+                   Toast.makeText(mContext, "Working", Toast.LENGTH_SHORT).show();
+               }
+
            }
        });
 

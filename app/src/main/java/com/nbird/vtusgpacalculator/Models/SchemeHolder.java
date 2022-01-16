@@ -9,6 +9,8 @@ public class SchemeHolder {
         this.text = text;
     }
 
+
+
     public int getPic() {
         return pic;
     }
