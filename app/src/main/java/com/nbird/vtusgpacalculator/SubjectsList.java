@@ -11,6 +11,9 @@ public class SubjectsList {
         this.branchNumber = branchNumber;
     }
 
+
+
+
     public int getSemNumber() {
         return semNumber;
     }

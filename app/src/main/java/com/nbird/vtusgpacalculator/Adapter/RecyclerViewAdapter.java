@@ -1,25 +1,22 @@
-package com.nbird.vtusgpacalculator;
+package com.nbird.vtusgpacalculator.Adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -28,8 +25,13 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.nbird.vtusgpacalculator.Models.SchemeHolder;
+import com.nbird.vtusgpacalculator.Modes;
+import com.nbird.vtusgpacalculator.R;
+import com.nbird.vtusgpacalculator.SubjectsList;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
@@ -73,11 +75,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
         holder.head.setText(mData.get(position).getTitle());
-        try{
-            holder.anim.setAnimation(mData.get(position).getThumbnail());
-        }catch (Exception e){
-          e.printStackTrace();
-        }
+//        try{
+//            holder.anim.setAnimation(mData.get(position).getThumbnail());
+//        }catch (Exception e){
+//          e.printStackTrace();
+//        }
 
         holder.dis.setText(mData.get(position).getDis());
 
@@ -90,16 +92,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 switch (position){
                     case 0:
                         branchAndSemeterAlertDialog(v);break;
-
                     case 1:
                         cgpaCalculatorAlertDialog(v);break;
-
+                    case 2:
+                        schemeListView(v);break;
                     case 3:
                         Intent browserIntenttos = new Intent(Intent.ACTION_VIEW, Uri.parse("https://results.vtu.ac.in/JAEcbcs/index.php"));
                         mContext.startActivity(browserIntenttos);break;
                     case 4:
                         percentageAlertDialog(v);break;
-
                 }
 
             }
@@ -132,6 +133,67 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         }
 
+
+    }
+
+
+    private void schemeListView(View v){
+        AlertDialog.Builder builder=new AlertDialog.Builder(mContext,R.style.AlertDialogTheme);
+
+        final View view1= LayoutInflater.from(mContext).inflate(R.layout.dialog_scheme_list,(ConstraintLayout) v.findViewById(R.id.layoutDialogContainer));
+        builder.setView(view1);
+        builder.setCancelable(true);
+
+        RecyclerView  recyclerViewBranch=(RecyclerView) view1.findViewById(R.id.recyclerview);
+        List<SchemeHolder> branchList=new ArrayList<>();
+
+
+
+        final AlertDialog alertDialog=builder.create();
+        if(alertDialog.getWindow()!=null){
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+        try{
+            alertDialog.show();
+        }catch (Exception e){
+
+        }
+
+        setModesList(branchList);
+        SchemeAdapter myAdapter=new SchemeAdapter(mContext,branchList);
+        recyclerViewBranch.setLayoutManager(new GridLayoutManager(mContext,2));
+        recyclerViewBranch.setAdapter(myAdapter);
+
+
+    }
+
+
+    private void setModesList(List<SchemeHolder> modesList){
+
+        modesList.add(new SchemeHolder(R.drawable.aeronautical_engineering,"Aeronautical Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.aerospace_engineering,"Aerospace Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.architecture,"Architecture"));
+        modesList.add(new SchemeHolder(R.drawable.automobile_engineering,"Automobile Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.biomedical_engineering,"Biomedical Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.biotechnology,"Biotechnology"));
+        modesList.add(new SchemeHolder(R.drawable.chemical_engineering,"Chemical Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.civil_engineering,"Civil Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.computer_science_engineering,"Computer Science & Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.electrical_electronics_engineering,"Electrical & Electronics Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.electronics_communication_engineering,"Electronics & Communication Engineering"));
+
+        modesList.add(new SchemeHolder(R.drawable.electronics_telecommunication_engineering,"Electronics & Telecommunication Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.industrial_production_engineering,"Industrial & Production Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.industrial_engineering_management,"Industrial Engineering & Management"));
+        modesList.add(new SchemeHolder(R.drawable.information_science_engineering,"Information Science & Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.manufacturing_engineering,"Manufacturing Science & Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.marine_engineering,"Marine Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.mechanical_engineering,"Mechanical Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.mecha,"Mechatronics"));
+        modesList.add(new SchemeHolder(R.drawable.medical_electronics,"Medical Electronics"));
+        modesList.add(new SchemeHolder(R.drawable.mining_engineering,"Mining Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.nano_technology,"Nano Technology"));
+        modesList.add(new SchemeHolder(R.drawable.petrochemical,"Petrochem Engineering"));
 
     }
 
