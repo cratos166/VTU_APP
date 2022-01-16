@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void setModesList(){
 
         modesList.add(new Modes("SGPA Calculator",R.raw.sgpa_cal,"Select your branch and sem and then enter all the marks for the respective subjects ."));
+        modesList.add(new Modes("VTU Portion",R.raw.portions_anim,"Select Your Branch And Semester To Get The Portion."));
         modesList.add(new Modes("CGPA Calculator",R.raw.cgpa_cal,"Enter all the semester SGPA in the Edit TextView till given to get the CGPA."));
         modesList.add(new Modes("Semester Scheme",R.raw.scheme,"By Selecting A Particular Branch You Will Be Directed To The PDF, Where You Will Be Provided With VTU Official Scheme."));
         modesList.add(new Modes("VTU Results",R.raw.result,"Click on this tab to get the VTU results which automatically redirects you to the VTU Website."));

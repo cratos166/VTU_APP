@@ -92,14 +92,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 switch (position){
                     case 0:
                         branchAndSemeterAlertDialog(v);break;
-                    case 1:
-                        cgpaCalculatorAlertDialog(v);break;
                     case 2:
-                        schemeListView(v);break;
+                        cgpaCalculatorAlertDialog(v);break;
                     case 3:
+                        schemeListView(v);break;
+                    case 4:
                         Intent browserIntenttos = new Intent(Intent.ACTION_VIEW, Uri.parse("https://results.vtu.ac.in/JAEcbcs/index.php"));
                         mContext.startActivity(browserIntenttos);break;
-                    case 4:
+                    case 5:
                         percentageAlertDialog(v);break;
                 }
 
@@ -137,6 +137,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
+    private void portionBranchAndSemSelector(){
+
+    }
+
+
     private void schemeListView(View v){
         AlertDialog.Builder builder=new AlertDialog.Builder(mContext,R.style.AlertDialogTheme);
 
@@ -170,13 +175,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private void setModesList(List<SchemeHolder> modesList){
 
+        modesList.add(new SchemeHolder(R.drawable.first_year,"First Year"));
+        modesList.add(new SchemeHolder(R.drawable.physics_cycle,"Engineering Physics Lab"));
+        modesList.add(new SchemeHolder(R.drawable.lab,"Engineering Chemistry Lab"));
+
         modesList.add(new SchemeHolder(R.drawable.aeronautical_engineering,"Aeronautical Engineering"));
         modesList.add(new SchemeHolder(R.drawable.aerospace_engineering,"Aerospace Engineering"));
         modesList.add(new SchemeHolder(R.drawable.architecture,"Architecture"));
         modesList.add(new SchemeHolder(R.drawable.automobile_engineering,"Automobile Engineering"));
         modesList.add(new SchemeHolder(R.drawable.biomedical_engineering,"Biomedical Engineering"));
         modesList.add(new SchemeHolder(R.drawable.biotechnology,"Biotechnology"));
-        modesList.add(new SchemeHolder(R.drawable.chemical_engineering,"Chemical Engineering"));
+        modesList.add(new SchemeHolder(R.drawable.chemistry,"Chemical Engineering"));
         modesList.add(new SchemeHolder(R.drawable.civil_engineering,"Civil Engineering"));
         modesList.add(new SchemeHolder(R.drawable.computer_science_engineering,"Computer Science & Engineering"));
         modesList.add(new SchemeHolder(R.drawable.electrical_electronics_engineering,"Electrical & Electronics Engineering"));
