@@ -167,16 +167,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
 
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
-//        linearLayoutManager.setOrientation(recyclerViewSubjects.VERTICAL);
-//        recyclerViewSubjects.setLayoutManager(linearLayoutManager);
-//
-//        subjectList = new ArrayList<>();
-//
-//
-//        SubjectAdapter categoryAdapter = new SubjectAdapter(mContext,datasubjectAdder(subjectList,selectedBranch,selectedSem));
-//        recyclerViewSubjects.setAdapter(categoryAdapter);
-//
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
+        linearLayoutManager.setOrientation(recyclerViewSubjects.VERTICAL);
+        recyclerViewSubjects.setLayoutManager(linearLayoutManager);
+
+        subjectList = new ArrayList<>();
+
+
+        SubjectAdapter categoryAdapter = new SubjectAdapter(mContext,datasubjectAdder(subjectList,selectedBranch,selectedSem));
+        recyclerViewSubjects.setAdapter(categoryAdapter);
+
 
 
         final AlertDialog alertDialog=builder.create();
@@ -193,11 +193,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-//    private List<String> datasubjectAdder(List<String> subjectList, int selectedBranch, int selectedSem){
-//
-//
-//
-//    }
+    private List<String> datasubjectAdder(List<String> subjectList, int selectedBranch, int selectedSem){
+
+
+
+    }
 
 
     private void schemeListView(View v){
