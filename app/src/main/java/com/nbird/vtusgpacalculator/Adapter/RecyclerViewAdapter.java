@@ -27,6 +27,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.nbird.vtusgpacalculator.Data.PortionSubjectList;
 import com.nbird.vtusgpacalculator.Models.SchemeHolder;
 import com.nbird.vtusgpacalculator.Modes;
 import com.nbird.vtusgpacalculator.R;
@@ -101,11 +102,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         branchAndSemeterAlertDialog(v,branchArr,semArr,0);break;
                     case 1:
                         String[] branchPortionArr = {"First Year", "Aeronautical Engineering", "Aerospace Engineering",
-                                "Architecture", "Automobile Engineering", "Biomedical Engineering", "Biotechnology",
+                                "Architecture", "Biomedical Engineering", "Biotechnology",
                                 "Chemical Engineering","Civil Engineering", "Computer Science & Engineering",
                                 "Electrical & Electronics Engineering", "Electronics & Communication Engineering",
                                 "Electronics & Instrumentation Engineering","Electronics & Telecommunication Engineering",
-                                "Industrial & Production Engineering", "Industrial Engineering & Management", "Information Science & Engineering",
+                                "Industrial & Production Engineering", "Information Science & Engineering",
                                 "Manufacturing Science & Engineering","Marine Engineering", "Mechanical Engineering", "Mechatronics", "Medical Electronics",
                                 "Mining Engineering","Nano Technology", "Petrochem Engineering"};
                         String[] semPortionArr = {"I","II","III","IV","V","VI","VII","VIII"};
@@ -163,7 +164,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         builder.setCancelable(true);
 
         RecyclerView  recyclerViewSubjects=(RecyclerView) view1.findViewById(R.id.recyclerview);
-        List<String> subjectList=new ArrayList<>();
 
 
 
@@ -171,10 +171,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         linearLayoutManager.setOrientation(recyclerViewSubjects.VERTICAL);
         recyclerViewSubjects.setLayoutManager(linearLayoutManager);
 
-        subjectList = new ArrayList<>();
 
-
-        SubjectAdapter categoryAdapter = new SubjectAdapter(mContext,datasubjectAdder(subjectList,selectedBranch,selectedSem));
+        SubjectAdapter categoryAdapter = new SubjectAdapter(mContext,datasubjectAdder(selectedBranch,selectedSem),selectedBranch,selectedSem);
         recyclerViewSubjects.setAdapter(categoryAdapter);
 
 
@@ -193,9 +191,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-    private List<String> datasubjectAdder(List<String> subjectList, int selectedBranch, int selectedSem){
+    private String[] datasubjectAdder(int selectedBranch, int selectedSem){
 
 
+        PortionSubjectList portionSubjectList=new PortionSubjectList(selectedSem,selectedBranch);
+
+        return portionSubjectList.getSubjectArr();
 
     }
 

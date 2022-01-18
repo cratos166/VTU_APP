@@ -39,12 +39,15 @@ import java.util.List;
 
 public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHolder> {
      Context mContext;
-     List<String> mData;
+     String[] mData;
+    int selectedBranch;
+    int selectedSem;
 
-
-    public SubjectAdapter(Context mContext, List<String> mData) {
+    public SubjectAdapter(Context mContext, String[] mData, int selectedBranch, int selectedSem) {
         this.mContext = mContext;
         this.mData = mData;
+        this.selectedBranch=selectedBranch;
+        this.selectedSem=selectedSem;
     }
 
 
@@ -52,10 +55,9 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHo
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.asset_cardview_pdf, parent, false);
+        view = mInflater.inflate(R.layout.asset_rec_text, parent, false);
 
         return new MyViewHolder(view);
-
     }
 
 
@@ -63,14 +65,15 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHo
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
 
-        holder.head.setText(mData.get(position));
-
-
+        holder.head.setText(mData[position]);
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(mContext, PDF_Activity.class);
-                intent.putExtra("branchName",mData.get(position));
+                intent.putExtra("subjectName",mData[position]);
+                intent.putExtra("isPortion",true);
+                intent.putExtra("selectedBranch",selectedBranch);
+                intent.putExtra("selectedSem",selectedSem);
                 mContext.startActivity(intent);
             }
         });
@@ -81,7 +84,7 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHo
 
     @Override
     public int getItemCount() {
-        return mData.size();
+        return mData.length;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {

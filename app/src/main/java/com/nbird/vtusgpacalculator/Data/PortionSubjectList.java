@@ -36,26 +36,19 @@ public class PortionSubjectList {
             case 11: switch (sem) { case 3: Electronics_Instrumentation_Engineering_III();break; case 4: Electronics_Instrumentation_Engineering_IV();break; case 5: Electronics_Instrumentation_Engineering_V();break; case 6: Electronics_Instrumentation_Engineering_VI();break; case 7: Electronics_Instrumentation_Engineering_VII();break; case 8: Electronics_Instrumentation_Engineering_VIII();break; }break;
             case 12: switch (sem) { case 3: Electronics_Telecommunication_Engineering_III();break; case 4: Electronics_Telecommunication_Engineering_IV();break; case 5: Electronics_Telecommunication_Engineering_V();break; case 6: Electronics_Telecommunication_Engineering_VI();break; case 7: Electronics_Telecommunication_Engineering_VII();break; case 8: Electronics_Telecommunication_Engineering_VIII();break; }break;
             case 13: switch (sem) { case 3: Industrial_Production_Engineering_III();break; case 4: Industrial_Production_Engineering_IV();break; case 5: Industrial_Production_Engineering_V();break; case 6: Industrial_Production_Engineering_VI();break; case 7: Industrial_Production_Engineering_VII();break; case 8: Industrial_Production_Engineering_VIII();break; }break;
-            case 14: switch (sem) { case 3: Industrial_Engineering_Management_III();break; case 4: Industrial_Engineering_Management_IV();break; case 5: Industrial_Engineering_Management_V();break; case 6: Industrial_Engineering_Management_VI();break; case 7: Industrial_Engineering_Management_VII();break; case 8: Industrial_Engineering_Management_VIII();break; }break;
-            case 15: switch (sem) { case 3: Information_Science_Engineering_III();break; case 4: Information_Science_Engineering_IV();break; case 5: Information_Science_Engineering_V();break; case 6: Information_Science_Engineering_VI();break; case 7: Information_Science_Engineering_VII();break; case 8: Information_Science_Engineering_VIII();break; }break;
-            case 16: switch (sem) { case 3: Manufacturing_Science_Engineering_III();break; case 4: Manufacturing_Science_Engineering_IV();break; case 5: Manufacturing_Science_Engineering_V();break; case 6: Manufacturing_Science_Engineering_VI();break; case 7: Manufacturing_Science_Engineering_VII();break; case 8: Manufacturing_Science_Engineering_VIII();break; }break;
-            case 17: switch (sem) { case 3: Marine_Engineering_III();break; case 4: Marine_Engineering_IV();break; case 5: Marine_Engineering_V();break; case 6: Marine_Engineering_VI();break; case 7: Marine_Engineering_VII();break; case 8: Marine_Engineering_VIII();break; }break;
-            case 18: switch (sem) { case 3: Mechanical_Engineering_III();break; case 4: Mechanical_Engineering_IV();break; case 5: Mechanical_Engineering_V();break; case 6: Mechanical_Engineering_VI();break; case 7: Mechanical_Engineering_VII();break; case 8: Mechanical_Engineering_VIII();break; }break;
-            case 19: switch (sem) { case 3: case 4: case 5: case 6: case 7: case 8: Mechatronics();break;}break;
-            case 20: switch (sem) { case 3: Medical_Electronics_III();break; case 4: Medical_Electronics_IV();break; case 5: Medical_Electronics_V();break; case 6: Medical_Electronics_VI();break; case 7: Medical_Electronics_VII();break; case 8: Medical_Electronics_VIII();break; }break;
-            case 21: switch (sem) { case 3:  Mining_Engineering_III();break; case 4:  Mining_Engineering_IV();break; case 5:  Mining_Engineering_V();break; case 6:  Mining_Engineering_VI();break; case 7:  Mining_Engineering_VII();break; case 8:  Mining_Engineering_VIII();break; }break;
-            case 22: switch (sem) { case 3: Nano_Technology_III();break; case 4: Nano_Technology_IV();break; case 5: Nano_Technology_V();break; case 6: Nano_Technology_VI();break; case 7: Nano_Technology_VII();break; case 8: Nano_Technology_VIII();break; }break;
-            case 23: switch (sem) { case 3: Petrochem_Engineering_III();break; case 4: Petrochem_Engineering_IV();break; case 5: Petrochem_Engineering_V();break; case 6: Petrochem_Engineering_VI();break; case 7: Petrochem_Engineering_VII();break; case 8: Petrochem_Engineering_VIII();break; }break;
+            case 14: switch (sem) { case 3: Information_Science_Engineering_III();break; case 4: Information_Science_Engineering_IV();break; case 5: Information_Science_Engineering_V();break; case 6: Information_Science_Engineering_VI();break; case 7: Information_Science_Engineering_VII();break; case 8: Information_Science_Engineering_VIII();break; }break;
+            case 15: switch (sem) { case 3: Manufacturing_Science_Engineering_III();break; case 4: Manufacturing_Science_Engineering_IV();break; case 5: Manufacturing_Science_Engineering_V();break; case 6: Manufacturing_Science_Engineering_VI();break; case 7: Manufacturing_Science_Engineering_VII();break; case 8: Manufacturing_Science_Engineering_VIII();break; }break;
+            case 16: switch (sem) { case 3: Marine_Engineering_III();break; case 4: Marine_Engineering_IV();break; case 5: Marine_Engineering_V();break; case 6: Marine_Engineering_VI();break; case 7: Marine_Engineering_VII();break; case 8: Marine_Engineering_VIII();break; }break;
+            case 17: switch (sem) { case 3: Mechanical_Engineering_III();break; case 4: Mechanical_Engineering_IV();break; case 5: Mechanical_Engineering_V();break; case 6: Mechanical_Engineering_VI();break; case 7: Mechanical_Engineering_VII();break; case 8: Mechanical_Engineering_VIII();break; }break;
+            case 18: switch (sem) { case 3: case 4: case 5: case 6: case 7: case 8: Mechatronics();break;}break;
+            case 19: switch (sem) { case 3: Medical_Electronics_III();break; case 4: Medical_Electronics_IV();break; case 5: Medical_Electronics_V();break; case 6: Medical_Electronics_VI();break; case 7: Medical_Electronics_VII();break; case 8: Medical_Electronics_VIII();break; }break;
+            case 20: switch (sem) { case 3:  Mining_Engineering_III();break; case 4:  Mining_Engineering_IV();break; case 5:  Mining_Engineering_V();break; case 6:  Mining_Engineering_VI();break; case 7:  Mining_Engineering_VII();break; case 8:  Mining_Engineering_VIII();break; }break;
+            case 21: switch (sem) { case 3: Nano_Technology_III();break; case 4: Nano_Technology_IV();break; case 5: Nano_Technology_V();break; case 6: Nano_Technology_VI();break; case 7: Nano_Technology_VII();break; case 8: Nano_Technology_VIII();break; }break;
+            case 22: switch (sem) { case 3: Petrochem_Engineering_III();break; case 4: Petrochem_Engineering_IV();break; case 5: Petrochem_Engineering_V();break; case 6: Petrochem_Engineering_VI();break; case 7: Petrochem_Engineering_VII();break; case 8: Petrochem_Engineering_VIII();break; }break;
         }
     }
         
-       
-        
-           
-        
-        
 
-    
 
     private void First_Year(){
         subjectArr= new String[]{"Advance Calculus And Numerical Methods", "Basic Electrical Engineering","Basic Electrical Lab","Basic Electronics","C Programming For Problem Solving",
@@ -103,9 +96,7 @@ public class PortionSubjectList {
         "HELICOPTER DYNAMICS"};
     }
 
-    
 
-    
 
     private void Aerospace_Engineering_III(){
         subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","AEROSPACE MATERIALS","Aadalitha Kannada","Aero Thermodynamics",
@@ -441,205 +432,277 @@ public class PortionSubjectList {
     
 
     private void Electronics_Communication_Engineering_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","Aadalitha Kannada","COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)","DIGITAL SYSTEM DESIGN LABORATORY","DIGITAL SYSTEM DESIGN",
+        "ELECTRONIC DEVICES AND INSTRUMENTATION LABORATORY","ELECTRONIC DEVICES","NETWORK THEORY","POWER ELECTRONICS AND INSTRUMENTATION",
+        "TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES","Vyavaharika Kannada"};
     }
 
     private void Electronics_Communication_Engineering_IV(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – II","ANALOG CIRCUITS LABORATORY","ANALOG CIRCUITS",
+        "COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS","CONTROL SYSTEMS","ENGINEERING STATISTICS and LINEAR ALGEBRA",
+        "MICROCONTROLLER LABORATORY","MICROCONTROLLER","SIGNALS AND SYSTEMS"};
     }
 
     private void Electronics_Communication_Engineering_V(){
-
+        subjectArr= new String[]{"DIGITAL SIGNAL PROCESSING LABORATORY","DIGITAL SIGNAL PROCESSING","ELECTROMAGNETIC WAVES",
+        "ENVIRONMENTAL STUDIES","HDL LABORATORY","INFORMATION THEORY and CODING","PRINCIPLES OF COMMUNICATION SYSTEMS",
+        "TECHNOLOGICAL INNOVATION MANAGEMENT AND ENTREPRENEURSHIP","Verilog HDL"};
     }
 
     private void Electronics_Communication_Engineering_VI(){
-
+        subjectArr= new String[]{"ARITIFICAL NEURAL NETWORKS","COMMUNICATION LAB","DATA STRUCTURE USING C++","DIGITAL COMMUNICATION",
+        "DIGITAL SYSTEM DESIGN USING VERILOG","EMBEDDED SYSTEMS LAB","EMBEDDED SYSTEMS","MICROWAVE and ANTENNAS","NANOELECTRONICS",
+        "OPERATING SYSTEM","PYTHON APPLICATION PROGRAMMING","SENSORS and SIGNAL CONDITIONING","SIGNAL PROCESSING"};
     }
 
     private void Electronics_Communication_Engineering_VII(){
-
+        subjectArr= new String[]{"AUTOMOTIVE ELECTRONICS","COMMUNICATION THEORY","COMPUTER NETWORKS LAB",
+        "COMPUTER NETWORKS","CRYPTOGRAPHY","DIGITAL IMAGEPROCESSING","DSP ALGORITHMS and ARCHITECTURE",
+        "IoT & WIRELESS SENSOR NETWORKS","MACHINE LEARNING WITH PYTHON","MULTIMEDIA COMMUNICATION",
+        "NEURAL NETWORKS","REAL TIME SYSTEM","SATELLITE COMMUNICATION","VLSI DESIGN","VLSI LAB"};
     }
 
     private void Electronics_Communication_Engineering_VIII(){
-
+        subjectArr= new String[]{"BIOMEDICAL SIGNAL PROCESSING","MICRO ELECTROMECHANICAL SYSTEMS","NETWORK SECURITY",
+        "OPTICAL COMMUNICATION NETWORKS","RADAR ENGINEERING","WIRELESS AND CELLULAR COMMUNICATION"};
     }
 
     
     private void Electronics_Instrumentation_Engineering_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","Aadalitha Kannada","Analog Electronic Circuits Lab",
+        "Analog Electronic Circuits","CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)","Digital Design and HDL Lab",
+        "Digital Design and HDL","Electronic Instrumentation and Measurements","Network Analysis","TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES",
+        "Transducers and Instrumentation","Vyavaharika Kannada"};
     }
 
     private void Electronics_Instrumentation_Engineering_IV(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – II","COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS",
+        "Control Systems","Embedded Controllers Lab","Embedded Controllers","Instrumentation and Measurement Lab",
+        "Process Instrumentation","Scientific and Analytical Instrumentation","Signal Conditioning and Data Acquisition Circuits"};
     }
 
     private void Electronics_Instrumentation_Engineering_V(){
-
+        subjectArr= new String[]{"Biomedical Instrumentation","Digital Signal Processing Lab","ENVIRONMENTAL STUDIES",
+        "Fundamentals of Signals and DSP","Lasers and Optical Instrumentation","Process Control Systems",
+        "Signal Conditioning Circuits and Data Acquisition Lab","Technological Innovation Management and Entrepreneurship",
+        "VLSI Design"};
     }
 
     private void Electronics_Instrumentation_Engineering_VI(){
-
+        subjectArr= new String[]{"Aeronautical Instrumentation","Analog and Digital Communication Systems","Digital Image Processing",
+        "Internship","JAVA Programming Lab","JAVA Programming","Lasers and Optical Instrumentation","Mini Project",
+        "OPEN ELECTIVE - A","Operating Systems","Power Electronics, Controls and Communication Lab",
+                "Power and Industrial Electronics","Robotics and Automation","Scientific and Analytical Instrumentation",
+        "Transducers and Instrumentation"};
     }
 
     private void Electronics_Instrumentation_Engineering_VII(){
-
+        subjectArr= new String[]{"Biomedical Instrumentation","Digital Signal Processing Lab","ENVIRONMENTAL STUDIES",
+        "Fundamentals of Signals and DSP","Lasers and Optical Instrumentation","Process Control Systems","Signal Conditioning Circuits and Data Acquisition Lab",
+        "Technological Innovation Management and Entrepreneurship","VLSI Design"};
     }
 
     private void Electronics_Instrumentation_Engineering_VIII(){
-
+        subjectArr= new String[]{"Artificial Intelligence and Machine Learning","Industrial Process Instrumentation",
+        "Instrumentation Buses and Industrial Data Networks","Internship","Medical Imaging Techniques","Neural Network and Fuzzy Logic Systems",
+        "Project Work Phase-2","Technical Seminar"};
     }
     
 
     private void Electronics_Telecommunication_Engineering_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","Aadalitha Kannada","COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)","DIGITAL SYSTEM DESIGN LABORATORY",
+        "DIGITAL SYSTEM DESIGN","ELECTRONIC DEVICES AND INSTRUMENTATION LABORATORY","ELECTRONIC DEVICES","NETWORK THEORY",
+        "POWER ELECTRONICS AND INSTRUMENTATION","TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES",
+        "Vyavaharika Kannada"};
     }
 
     private void Electronics_Telecommunication_Engineering_IV(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – II","ANALOG CIRCUITS","COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS",
+        "CONTROL SYSTEMS","ENGINEERING STATISTICS and LINEAR ALGEBRA","MICROCONTROLLER LABORATORY","MICROCONTROLLER","SIGNALS AND SYSTEMS"};
     }
 
     private void Electronics_Telecommunication_Engineering_V(){
-
+        subjectArr= new String[]{"DIGITAL SIGNAL PROCESSING LABORATORY","DIGITAL SIGNAL PROCESSING","ELECTROMAGNETIC WAVES",
+        "ENVIRONMENTAL STUDIES","HDL LABORATORY","INFORMATION THEORY and CODING","PRINCIPLES OF COMMUNICATION SYSTEMS","TECHNOLOGICAL INNOVATION MANAGEMENT AND ENTREPRENEURSHIP",
+        "Verilog HDL"};
     }
 
     private void Electronics_Telecommunication_Engineering_VI(){
-
+        subjectArr= new String[]{"ANALOG and DIGITAL COMMUNICATION LAB","ARITIFICAL NEURAL NETWORKS","COMPUTER COMMUNICATION NETWORKS LAB",
+                "COMPUTER COMMUNICATION NETWORKS","DIGITAL COMMUNICATION","EMBEDDED MICROCONTROLLER and SYSTEMS","MICROWAVE THEORY and ANTENNAS",
+        "OBJECT ORIENTED PROGRAMMING USING C++","OPERATING SYSTEM","RADIO FREQUENCY INTEGRATED CIRCUITS","SENSORS AND SIGNAL CONDITIONING",
+        "SIGNAL PROCESSING"};
     }
 
     private void Electronics_Telecommunication_Engineering_VII(){
-
+        subjectArr= new String[]{"AUTOMOTIVE ELECTRONICS","CMOS VLSI DESIGN","COMMUNICATION THEORY","CRYPTOGRAPHY","DATA STRUCTURES USING C++",
+        "DIGITAL IMAGE PROCESSING","IoT& WIRELESS SENSOR NETWORKS","MACHINE LEARNING","MICROWAVE and ANTENNAS LAB","MULTIMEDIA COMMUNICATION",
+        "NEURAL NETWORKS","OPTICAL COMMUNICATION","REAL TIME SYSTEM","SATELLITE COMMUNICATION","WIRELESS COMMUNICATION LAB","WIRELESS COMMUNICATIONS"};
     }
 
     private void Electronics_Telecommunication_Engineering_VIII(){
-
+        subjectArr= new String[]{"ADVANCED CELLULAR COMMUNICATION","MICRO ELECTROMECHANICAL SYSTEMS","NETWORK MANAGEMENT",
+        "NETWORK SECURITY","RADAR ENGINEERING","SUSTAINABLE TELECOMMUNICATION NETWORKS"};
     }
     
 
     private void Industrial_Production_Engineering_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","Aadalitha Kannada","BASIC THERMODYNAMICS",
+        "CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)","FLUID MECHANICS","FOUNDRY AND FORGING LABORATORY",
+        "MANUFACTURING PROCESS - I","MECHANICAL MEASUREMENTS","MECHANICS OF MATERIALS","METROLOGY AND MEASUREMENTS LABORATORY",
+        "TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES","Vyavaharika Kannada"};
     }
 
     private void Industrial_Production_Engineering_IV(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – II","CADCAM","COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS",
+        "COMPUTER AIDED MACHINE DRAWING","KINEMATICS OF MACHINES","MACHINE SHOP","MANUFACTURING PROCESS- II","MATERIAL SCIENCE AND METALLURGY",
+        "METALLOGRAPHY AND MATERIAL TESTING LABORATORY"};
     }
 
     private void Industrial_Production_Engineering_V(){
-
+        subjectArr= new String[]{"COMPOSITE MATERIALS","DESIGN OF MACHINES ELEMENTS","ENVIRONMENTAL STUDIES","HYDRAULICS AND PNEUMATICS",
+        "MANAGEMENT AND ENTREPRENEURSHIP","MECHANICAL AND FLUID POWER LAB","QUALITY ASSURANCE AND RELIABILITY","WORK STUDY AND ERGONOMICS LAB",
+        "WORK STUDY AND ERGONOMICS"};
     }
 
     private void Industrial_Production_Engineering_VI(){
-
+        subjectArr= new String[]{"ADVANCED MACHINING PROCESS","CADCAM LAB","COMPUTER INTEGRATED MANUFACTURING","ENGINEERING ECONOMY",
+        "INTERNSHIP","MACHINE TOOL LAB","MANAGEMENT INFORMATION SYSTEMS","MINI PROJECT","OPERATIONS RESEARCH","THEORY OF METAL FORMING",
+        "TOOL ENGINEERING AND DESIGN","TOTAL QUALITY MANAGEMENT","VALUE ENGINEERING"};
     }
 
     private void Industrial_Production_Engineering_VII(){
-
+        subjectArr= new String[]{"AUTOMOBILE ENGINEERING","AUTOMOTIVE ENGINEERING","CNC AND ROBOTICS LAB","DESIGN OF EXPERIMENTS","ENTERPRISE RESOURCE PLANNING",
+        "HUMAN RESOURCE MANAGEMENT","JUST IN TIME MANUFACTURING","MARKETING MANAGEMENT","MECHA TRONICS","NON–CONVENTIONAL MACHINING PROCESSES",
+        "OPERATIONS MANAGEMENT","PROJECT MANAGEMENT","PROJECT WORK PHASE - I","SOFTWARE APPLICATIONS LAB"};
     }
 
     private void Industrial_Production_Engineering_VIII(){
-
-    }
-
-
-    private void Industrial_Engineering_Management_III(){
-
-    }
-
-    private void Industrial_Engineering_Management_IV(){
-
-    }
-
-    private void Industrial_Engineering_Management_V(){
-
-    }
-
-    private void Industrial_Engineering_Management_VI(){
-
-    }
-
-    private void Industrial_Engineering_Management_VII(){
-
-    }
-
-    private void Industrial_Engineering_Management_VIII(){
-
+        subjectArr= new String[]{"ADVANCED JOINING PROCESS AND NDT","AUTOMATION IN MANUFACTURING","FACILITY PLANNING AND DESIGN",
+        "PROJECT WORK PHASE -II","SUPPLY CHAIN MANAGEMENT","TECHNICAL SEMINAR"};
     }
 
    
 
     private void Information_Science_Engineering_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","ANALOG AND DIGITAL ELECTRONICS LABORATORY","ANALOG AND DIGITAL ELECTRONICS",
+        "Aadalitha Kannada","COMPUTER ORGANIZATION","CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)",
+        "DATA STRUCTURES AND APPLICATIONS","DATA STRUCTURES LABORATORY","DISCRETE MATHEMATICAL STRUCTURES",
+        "SOFTWARE ENGINEERING","TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES","Vyavaharika Kannada"};
     }
 
     private void Information_Science_Engineering_IV(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – II","COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS",
+        "DATA COMMUNICATION","DESIGN AND ANALYSIS OF ALGORITHMS LABORATORY","DESIGN AND ANALYSIS OF ALGORITHMS",
+        "MANAGEMENT AND ENTREPRENEURSHIP FOR IT INDUSTRY","MICROCONTROLLER AND EMBEDDED SYSTEMS LABORATORY","MICROCONTROLLER AND EMBEDDED SYSTEMS",
+        "OPERATING SYSTEMS"};
     }
 
     private void Information_Science_Engineering_V(){
-
+        subjectArr= new String[]{"APPLICATION DEVELOPMENT USING PYTHON","AUTOMATA THEORY AND COMPUTABILITY","COMPUTER NETWORK LABORATORY",
+        "COMPUTER NETWORKS AND SECURITY","DATABASE MANAGEMENT SYSTEM","DBMS LABORATORY WITH MINI PROJECT","OBJECT ORIENTED CONCEPTS",
+        "UNIX PROGRAMMING"};
     }
 
     private void Information_Science_Engineering_VI(){
-
+        subjectArr= new String[]{"ADVANCED JAVA AND J2EE","CLOUD COMPUTING AND ITS APPLICATIONS","DATA MINING AND DATA WAREHOUSING",
+        "ENVIRONMENTAL STUDIES","FILE STRUCTURES LABORATORY WITH MINI PROJECT","FILE STRUCTURES","INFORMATION MANAGEMENT SYSTEM",
+        "INTRODUCTION TO DATA SRUCTURES AND ALGORITHM","MOBILE APPLICATION DEVELOPMENT","MOBILE APPLICATION DEVELOPMENT",
+        "OBJECT ORIENTED MODELING AND DESIGN","PROGRAMMING IN JAVA","PYTHON APPLICATION PROGRAMMING","SOFTWARE TESTING LABORATORY",
+        "SOFTWARE TESTING","WEB TECHNOLOGY AND ITS APPLICATIONS"};
     }
 
     private void Information_Science_Engineering_VII(){
-
+        subjectArr= new String[]{"ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING LABORATORY","ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "BIG DATA AND ANALYTICS","CRYPTOGRAPHY","DIGITAL IMAGE PROCESSING","HIGH PERFORMANCE COMPUTING","INTRODUCTION TO ARTIFICIAL INTELLIGENCE",
+        "INTRODUCTION TO BIG DATA ANALYTICS","INTRODUCTION TO DOT NET FRAMEWORK FOR APPLICATION DEVELOPMENT",
+        "INTRODUCTION TO OPERATING SYSTEM","NATURAL LANGUAGE PROCESSING","NETWORK MANAGEMENT","ROBOTIC PROCESS AUTOMATION DESIGN & DEVELOPMENT",
+        "SOFTWARE ARCHITECTURE AND DESIGN PATTERNS","STORAGE AREA NETWORKS","USER INTERFACE DESIGN"};
     }
 
     private void Information_Science_Engineering_VIII(){
-
+        subjectArr= new String[]{"ADVANCED COMPUTER ARCHITECTURES","INTERNET OF THINGS","MOBILE COMPUTING","MULTICORE ARCHITECTURE AND PROGRAMMING",
+        "NOSQL DATABASE"};
     }
 
     
 
     private void Manufacturing_Science_Engineering_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","Aadalitha Kannada","BASIC THERMODYNAMICS",
+        "COMPUTER AIDED MACHINE DRAWING","CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)",
+        "FOUNDRY AND FORGING LAB","FOUNDRY TECHNOLOGY","MATERIAL SCIENCE","MATERIAL TESTING LAB",
+        "MECHANICS OF MATERIALS","TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES",
+        "Vyavaharika Kannada"};
     }
 
     private void Manufacturing_Science_Engineering_IV(){
-
+        subjectArr= new String[]{"COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS","FLUID MECHANICS AND MACHINERY LAB",
+        "FLUID MECHANICS AND MACHINES","JOINING PROCESSES","MACHINE TOOLS AND OPERATIONS","MECHANICAL MEASUREMENTS AND METROLOGY LAB",
+        "MECHANICAL MEASUREMENTS AND METROLOGY","THEORY OF MACHINES"};
     }
 
     private void Manufacturing_Science_Engineering_V(){
-
+        subjectArr= new String[]{"COMPUTER AIDED DESIGN AND MANUFACTURING LAB","COMPUTER AIDED DESIGN AND MANUFACTURING",
+        "ELEMENTS OF MACHINE DESIGN","ENVIRONMENTAL STUDIES","MANAGEMENT AND ENTREPRENEURSHIP","METAL FORMING",
+        "Operations Research","STATISTICAL QUALITY CONTROL","WORKSHOP AND MACHINE SHOP PRACTICE"};
     }
 
     private void Manufacturing_Science_Engineering_VI(){
-
+        subjectArr= new String[]{"ADDITIVE MANUFACTURING LABORATORY","ADDITIVE MANUFACTURING","AUTOMATION AND ROBOTICS",
+        "COMPUTER INTEGRATED MANUFACTURING","Knowledge Management","MAINTENANCE ENGINEERING","Machine Tool Design",
+        "NON DESTRUCTIVE TESTING LABORATORY","NON DESTRUCTIVE TESTING","TOOL ENGINEERING"};
     }
 
     private void Manufacturing_Science_Engineering_VII(){
-
+        subjectArr= new String[]{"CONTROL ENGINEERING","FACILITY PLANNING AND DESIGN","HYDRAULIC CIRCUITS AND PROGRAMMABLE LOGIC CONTROLLERS (PLC) LABORATORY",
+        "HYDRAULIC CIRCUITS AND PROGRAMMABLE LOGIC CONTROLLERS (PLC)","JIGS AND FIXTURES","MODELING AND SIMULATION LABORATORY",
+        "Optimization Techniques","PRECISION ENGINEERING","PROCESS PLANNING","QUALITY ASSURANCE","SUPPLY CHAIN MANAGEMENT",
+        "SURFACE ENGINEERING"};
     }
 
     private void Manufacturing_Science_Engineering_VIII(){
-
+        subjectArr= new String[]{"FLEXIBLE MANUFACTURING SYSTEMS","PRODUCT LIFECYCLE MANAGEMENT","PROJECT MANAGEMENT","TOTAL QUALITY MANAGEMENT"};
     }
 
     
 
     private void Marine_Engineering_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","BASIC THERMODYNAMICS","ELEMENTARY NAVIGATION, SEAMANSHIP AND SURVIVAL AT SEA",
+        "MATERIAL SCIENCE","MATERIAL TESTING LAB(3) MECHANICAL MEASUREMENTS AND METROLOGY LAB","MECHANICAL MEASUREMENTS AND METROLOGY",
+        "MECHANICS OF MATERIALS","TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES"};
     }
 
     private void Marine_Engineering_IV(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – II","APPLIED THERMODYNAMICS","FLUID MECHANICS",
+        "MACHINE SHOP AND FOUNDRY LAB(4) COMPUTER AIDED MARINE ENGINEERING DRAWING","MARINE HEAT ENGINE AND AIR CONDITIONING",
+        "SHIP STRUCTURE AND CONSTRUCTION","THEORY OF MACHINES"};
     }
 
     private void Marine_Engineering_V(){
-
+        subjectArr= new String[]{"ENVIRONMENTAL STUDIES","FLUID MECHANICS AND MACHINES LAB","MANAGEMENT AND ECONOMICS",
+        "MARINE AUXILLARY MACHINES","MARINE BOILERS","MARINE ENGINE LAB","MARINE INTERNAL COMBUSTION ENGINE- I",
+        "NAVAL ARCHITECTURE","TURBOMACHINES"};
     }
 
     private void Marine_Engineering_VI(){
-
+        subjectArr= new String[]{"ADVANCED MARINE TECHNOLOGY","AUTOMATION AND INDUSTRIAL ROBOTICS",
+        "CONTROL ENGINEERING","DESIGN OF MACHINE ELEMENTS","ENERGY ENGINEERING","HEAT TRANSFER LAB",
+        "HEAT TRANSFER","MARINE ELECTRICAL LAB","MARINE ELECTRICAL TECHNOLOGY","MARINE INTERNAL COMBUSTION ENGINE-II",
+        "MECHANICS OF COMPOSITE MATERIAL","MICRO AND SMART TECHNOLOGY","NON TRADITIONAL MACHINING"};
     }
 
     private void Marine_Engineering_VII(){
-
+        subjectArr= new String[]{"ADVANCED MARINE AUXILIARY MACHINES","ENERGY AND ENVIRONMENT","HYDRAULICS AND PNEUMATICS",
+        "MARINE CORROSION AND PREVENTION","MARINE MACHINERY AND SYSTEM DESIGN","MECHA TRONICS","MECHANICAL VIBRATION",
+        "OPERATIONS RESEARCH","PROJECT MANAGEMENT","SHIP FIRE PREVENTION AND SAFETY","SHIP RECYCLING","SHIPPING PRACTICE",
+                "SIMULATION LAB","STABILITY OF SHIPS","TRIBOLOGY","VIBRATION LAB"};
     }
 
     private void Marine_Engineering_VIII(){
-
+        subjectArr= new String[]{"ENGINE ROOM MANAGEMENT","MARINE ENGINE PRACTICE","SHIPPING TRADE","STEAM ENGINEERING",
+        "TRANSPORT AND LOGISTICS MANAGEMENT"};
     }
 
     
