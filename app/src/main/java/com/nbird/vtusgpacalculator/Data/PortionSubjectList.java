@@ -41,7 +41,7 @@ public class PortionSubjectList {
             case 16: switch (sem) { case 3: Manufacturing_Science_Engineering_III();break; case 4: Manufacturing_Science_Engineering_IV();break; case 5: Manufacturing_Science_Engineering_V();break; case 6: Manufacturing_Science_Engineering_VI();break; case 7: Manufacturing_Science_Engineering_VII();break; case 8: Manufacturing_Science_Engineering_VIII();break; }break;
             case 17: switch (sem) { case 3: Marine_Engineering_III();break; case 4: Marine_Engineering_IV();break; case 5: Marine_Engineering_V();break; case 6: Marine_Engineering_VI();break; case 7: Marine_Engineering_VII();break; case 8: Marine_Engineering_VIII();break; }break;
             case 18: switch (sem) { case 3: Mechanical_Engineering_III();break; case 4: Mechanical_Engineering_IV();break; case 5: Mechanical_Engineering_V();break; case 6: Mechanical_Engineering_VI();break; case 7: Mechanical_Engineering_VII();break; case 8: Mechanical_Engineering_VIII();break; }break;
-            case 19: switch (sem) { case 3: Mechatronics_III();break; case 4: Mechatronics_IV();break; case 5: Mechatronics_V();break; case 6: Mechatronics_VI();break; case 7: Mechatronics_VII();break; case 8: Mechatronics_VIII();break; }break;
+            case 19: switch (sem) { case 3: case 4: case 5: case 6: case 7: case 8: Mechatronics();break;}break;
             case 20: switch (sem) { case 3: Medical_Electronics_III();break; case 4: Medical_Electronics_IV();break; case 5: Medical_Electronics_V();break; case 6: Medical_Electronics_VI();break; case 7: Medical_Electronics_VII();break; case 8: Medical_Electronics_VIII();break; }break;
             case 21: switch (sem) { case 3:  Mining_Engineering_III();break; case 4:  Mining_Engineering_IV();break; case 5:  Mining_Engineering_V();break; case 6:  Mining_Engineering_VI();break; case 7:  Mining_Engineering_VII();break; case 8:  Mining_Engineering_VIII();break; }break;
             case 22: switch (sem) { case 3: Nano_Technology_III();break; case 4: Nano_Technology_IV();break; case 5: Nano_Technology_V();break; case 6: Nano_Technology_VI();break; case 7: Nano_Technology_VII();break; case 8: Nano_Technology_VIII();break; }break;
@@ -539,7 +539,7 @@ public class PortionSubjectList {
 
     }
 
-    
+
     private void Industrial_Engineering_Management_III(){
 
     }
@@ -645,156 +645,214 @@ public class PortionSubjectList {
     
 
     private void Mechanical_Engineering_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","Aadalitha Kannada","BASIC THERMODYNAMICS",
+        "COMPUTER AIDED MACHINE DRAWING","CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)",
+        "FOUNDRY, FORGING AND WELDING LAB","MATERIAL SCIENCE","MATERIAL TESTING LAB","MECHANICAL MEASUREMENTS AND METROLOGY LAB",
+        "MECHANICAL MEASUREMENTS AND METROLOGY","MECHANICS OF MATERIALS","METAL CASTING AND WELDING","METAL CUTTING AND FORMING",
+        "TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES","Vyavaharika Kannada","WORKSHOP AND MACHINE SHOP PRACTICE"};
     }
 
     private void Mechanical_Engineering_IV(){
-
+        subjectArr= new String[]{"APPLIED THERMODYNAMICS","COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS",
+        "COMPUTER AIDED MACHINE DRAWING","FLUID MECHANICS","FOUNDRY, FORGING AND WELDING LAB","KINEMATICS OF MACHINES",
+        "MATERIAL TESTING LAB","MECHANICAL MEASUREMENTS AND METROLOGY LAB","MECHANICAL MEASUREMENTS AND METROLOGY",
+        "METAL CASTING AND WELDING","METAL CUTTING AND FORMING","WORKSHOP AND MACHINE SHOP PRACTICE"};
     }
 
     private void Mechanical_Engineering_V(){
-
+        subjectArr= new String[]{"DESIGN OF MACHINE ELEMENTS- I","DYNAMICS OF MACHINES","ENERGY CONVERSION LABORATORY",
+        "ENVIRONMENTAL STUDIES","FLUID MECHANICS AND MACHINES LAB","FLUID POWER ENGINEERING","MANAGEMENT AND ECONOMICS",
+        "OPERATIONS MANAGEMENT","TURBO MACHINES"};
     }
 
     private void Mechanical_Engineering_VI(){
-
+        subjectArr= new String[]{"ADAVNCED VIBRATIONS","ADVANCED MATERIALS TECHNOLOGY","COMPOSITE MATERIALS TECHNOLOGY",
+        "COMPUTER AIDED MODELLING AND ANALYSIS LAB","DESIGN OF MACHINE ELEMENTS II","ENERGY AND ENVIRONMENT",
+        "FINITE ELEMENT METHODS","HEAT TRANSFER LAB","HEAT TRANSFER","INDUSTRIAL SAFETY","NON CONVENTIONAL ENERGY SOURCES",
+        "NON-TRADITIONAL MACHINING","OPTIMISATION TECHNIQUES","REFRIGERATION AND AIR CONDITIONING","SUPPLY CHAIN MANAGEMENT",
+        "THEORY OF ELASTICITY","WORLD CLASS MANUFACTURING"};
     }
 
     private void Mechanical_Engineering_VII(){
-
+        subjectArr= new String[]{"ADDITIVE MANUFACTURING","AUTOMATION & ROBOTICS","COMPUTATIONAL FLUID DYNAMICS",
+        "COMPUTER AIDED DESIGN AND MANUFACTURING","COMPUTRE AIDED MANUFACTURING LAB","CONTROL ENGINEERING",
+        "DESIGN FOR MANUFACTURE","DESIGN LAB","EMERGING SUSTAINABLE BUILDING COOLING TECHNOLOGIES","MECHA TRONICS",
+        "OPERATIONS RESEARCH","PROJECT MANAGEMENT","THEORYOF PLASTICITY","TOTAL QUALITY MANAGEMENT"};
     }
 
     private void Mechanical_Engineering_VIII(){
-
+        subjectArr= new String[]{"AUTOMOTIVE ENGINEERING","CNC MACHINE TOOLS","ENERGY ENGINEERING",
+        "FRACTURE MECHANICS","NON-DESTRUCTIVE TESTINGAND EVALUATION","TOOL DESIGN","TRIBOLOGY"};
     }
 
    
 
-    private void Mechatronics_III(){
-
-    }
-
-    private void Mechatronics_IV(){
-
-    }
-
-    private void Mechatronics_V(){
-
-    }
-   
-    private void Mechatronics_VI(){
-
-    }
-
-    private void Mechatronics_VII(){
-
-    }
-
-    private void Mechatronics_VIII(){
-
+    private void Mechatronics(){
+        subjectArr= new String[]{"Mechatronics"};
     }
 
    
 
     private void  Medical_Electronics_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","Aadalitha Kannada","Analog Electronic Circuits Lab",
+        "Analog Electronic Circuits","CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)",
+        "Digital Design and HDL Lab","Digital Design and HDL","Electronic Instrumentation and Measurements",
+        "Human Anatomy and Physiology","Network Analysis","TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES",
+        "Vyavaharika Kannada"};
     }
 
     private void  Medical_Electronics_IV(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – II","Biomedical Transducers and Instrumentation",
+        "COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS","Embedded Controllers Lab",
+        "Embedded Controllers","Physiological Measurements and Biomedical Instrumentation Lab",
+        "Scientific and Analytical Instrumentation","Signal Conditioning and Data Acquisition Circuits",
+        "Signals and Systems"};
     }
 
     private void  Medical_Electronics_V(){
-
+        subjectArr= new String[]{"Control Systems","Diagnostic and Therapeutic Equipment’s Lab",
+        "Diagnostic and Therapeutic Equipment’s","Digital Signal Processing","ENVIRONMENTAL STUDIES",
+        "Rehabilitation Engineering","Signal Conditioning Circuits and Data Acquisition Lab",
+        "Technological Innovation Management and Entrepreneurship","VLSI Design"};
     }
 
     private void  Medical_Electronics_VI(){
-
+        subjectArr= new String[]{"Analog and Digital Communication Systems","Biomedical Transducers and Instrumentation",
+        "Hospital Design, Planning & Management","Internship","JAVA Programming Lab","JAVA Programming","Medical Electronics Design",
+        "Medical Image Processing Lab","Medical Image Processing","Medical Imaging Systems","Medical Physics",
+        "Mini Project","OPEN ELECTIVE - A","Rehabilitation Engineering","Virtual Bio-Instrumentation"};
     }
 
     private void  Medical_Electronics_VII(){
-
+        subjectArr= new String[]{"ARM Processor Lab","ARM Processor","Biomechanics and Biodynamics","Biomedical DSP Lab",
+        "Biomedical Digital Signal Processing Secondary","Biomedical Digital Signal Processing","Biometric Systems",
+        "Biostatistics","Database Management System in Healthcare","Ergonomics","Internet of Things","Internship",
+        "Lasers and Optical Fibers in Medicine","Medical Image Processing","Medical Informatics and Expert Systems Secondary",
+                "Medical Informatics and Expert Systems","OPEN ELECTIVE - B","Project Work Phase-1"};
     }
 
-    private void  Medical_Electronics_VIII(){
-
+    private void  Medical_Electronics_VIII() {
+        subjectArr = new String[]{"Artificial Intelligence and Machine Learning", "Bio-MEMS", "Biomaterials and Artificial Organs}",
+                "Computer Communication Networks in Healthcare", "Internship", "Medical Imaging Systems", "Project Work Phase-2",
+                "Technical Seminar"};
     }
 
     
 
     private void Mining_Engineering_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","Aadalitha Kannada","CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)",
+        "DRILLING AND BLASTING","ELEMENTS OF MINING ENGINEERING","MECHANICS OF MATERIALS","MINE SURVEYING – I LABORATORY",
+        "MINE SURVEYING – I","MINERALOGY AND PETROLOGY LABORATORY","MINERALOGY, PETROLOGY AND STRATIGRAPHY",
+                "TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES","Vyavaharika Kannada"};
     }
 
     private void Mining_Engineering_IV(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – II","COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS","GEOLOGY FOR MINING ENGINEERS LAB",
+        "GEOLOGY FOR MINING ENGINEERS","MINE SURVEYING – II LABORATORY","MINE SURVEYING-II","MINING MACHINERY","THERMODYNAMICS AND FLUID MECHANICS",
+        "UNDERGROUND METAL MINING"};
     }
 
     private void Mining_Engineering_V(){
-
+        subjectArr= new String[]{"ENVIRONMENTAL STUDIES","MINE ELECTRICAL ENGINEERING LABORATORY","MINE ELECTRICAL ENGINEERING",
+        "MINE MANAGEMENT","MINE VENTILATION","ROCK MECHANICS LAB","ROCK MECHANICS","SURFACE MINING","UNDERGROUND COAL MINING"};
     }
 
     private void Mining_Engineering_VI(){
-
+        subjectArr= new String[]{"ENVIRONMENTAL MANAGEMENT IN SURFACE MINES","GROUND CONTROL","INTERNSHIP",
+        "MINE ENVIRONMENTAL ENGINEERING","MINE VENTILATION AND ENVIRONMENT LABORATORY","MINERAL PROCESSING & FUEL TECHNOLOGY",
+        "MINERAL PROCESSING LABORATORY","MINI PROJECT","SURFACE MINE PLANNING & DESIGN","TUNNELING ENGINEERING",
+        "UNDERGROUND MINE PLANNING AND DESIGN","UNDERGROUND SPACE TECHNOLOGY"};
     }
 
     private void Mining_Engineering_VII(){
-
+        subjectArr= new String[]{"COMPUTER APPLICATION IN MINING LAB","COMPUTER APPLICATION IN MINING","INDUSTRIAL SAFETY ENGINEERING",
+        "MINE OPTIMIZATION LABORATORY","MINE SYSTEMS ENGINEERING","MINERAL ECONOMICS","NUMERICAL MODELLING AND INSTRUMENTATION IN ROCK MECHANICS",
+        "OCCUPATIONAL HEALTH & GENERAL SAFETY","OPEN PIT SLOPE ANALYSIS AND DESIGN","PROJECT MANAGEMENT","PROJECT WORK PHASE - 1"};
     }
 
     private void Mining_Engineering_VIII(){
-
+        subjectArr= new String[]{"COAL BED METHANE","DIMENSIONAL STONE MINING","MINE LEGISLATION","MINING GEOSTATISTICS",
+        "PROJECT WORK PHASE -II","TECHNICAL SEMINAR"};
     }
 
     
 
     private void Nano_Technology_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","Aadalitha Kannada","BASICS OF MATERIAL SCIENCE",
+        "Constitution of India, Professional Ethics and Cyber Law (CPC)","DIGITAL ELECTRONICS LAB",
+        "FOUNDATIONS OF NANOSCALE SCIENCE AND TECHNOLOGY","FUNDAMENTALS OF BIOSCIENCE","PHYSICAL AND CHEMICAL PRINCIPLES OF NANOTECHNOLOGY",
+        "SIMULATION AND MODELLING LAB","SYNTHESIS AND PROCESSING OF NANOMATERIALS","TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES",
+        "Vyavaharika Kannada"};
     }
 
     private void Nano_Technology_IV(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – II","APPLICATIONS OF NANOTECHNOLOGY","BIOCHEMISTRY AND MICROBIOLOGY LAB",
+        "BIOCHEMISTRY AND MICROBIOLOGY","COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS","ELECTRONIC INSTRUMENTATION LAB",
+        "ELECTRONIC INSTRUMENTS AND MEASUREMENTS","ENGINEERING MATERIALS AND SURFACE COATING","MATERIAL SCIENCE AND ENGINEERING"};
     }
 
     private void Nano_Technology_V(){
-
+        subjectArr= new String[]{"CHARACTERIZATION AND MEASUREMENT LAB","CHARACTERIZATION TECHNIQUES","ENVIRONMENTAL STUDIES",
+        "MANAGEMENT AND ENTREPRENEURSHIP","MICRO FLUIDICS AND NANO FLUIDS","NANO-PYTHON PROGRAMMING LANGUAGE FOR AUTOMATION",
+        "NANOMATERIALS SYNTHESIS LAB","QUANTUM MECHANICS AND SIMULATION TECHNIQUES","SYNTHESIS OF NANOMATERIALS"};
     }
 
     private void Nano_Technology_VI(){
-
+        subjectArr= new String[]{"BIOMA TERIALS","COMPOSITES AND THEIR APPLICATIONS","INTERNSHIP","INTRODUCTION TO NANOSCIENCE AND NANOTECHNOLOGY",
+        "MECHANICAL OPERATIONS","MEMS AND NEMS","MEMS SIMULATION LAB","MINI PROJECT","NANO-PHOTONICS","NANOMATERIAL SURFACE CHARACTERIZATION AND THIN FILM LAB",
+        "NANOMATERIALS AND THEIR APPLICATIONS","NANOMATERIALS SYNTHESIS AND CHARACTERIZATION TECHNIQUES","SURFACE SCIENCE AND THIN FILM TECHNOLOGY"};
     }
 
     private void Nano_Technology_VII(){
-
+        subjectArr= new String[]{"APPLICATIONSOF NANOTECHNOLOGY IN ELECTRONICS","FUNDAMENTALS OF THERMODYNAMICS","GREEN NANOTECHNOLOGY",
+        "MOLECULAR BIOLOGY AND GENETIC ENGINEERING LAB","MOLECULAR BIOLOGY AND GENETIC ENGINEERING","MOSFETS AND DIGITAL CIRCUITS",
+        "NANO-ELECTRONICS","NANO-TRIBOLOGY AND FRACTURE MECHANICS","NANODEVICES AND APPLICATIONS","NANOMATERIALS FOR CONSTRUCTION AND ENVIRONMENTAL APPLICATIONS",
+        "NANOTECHNOLOGY IN AGRICULTURE AND FOOD PROCESSING","NANOTECHNOLOGY IN BIOMEDICAL ENGINEERING","PROJECT WORK PHASE - 1"};
     }
 
     private void Nano_Technology_VIII(){
-
+        subjectArr= new String[]{"BIO-NANOTECHNOLOGY","DIGITAL SYSTEMS DESIGN","MICROCONTROLLERS AND INTERFACE",
+        "NANO TOXICOLOGY","PROJECT WORK PHASE -II","TECHNICAL SEMINAR"};
     }
 
    
 
     private void Petrochem_Engineering_III(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – I","Aadalitha Kannada","CHEMICAL PROCESS CALCULATIONS",
+        "CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)","INSTRUMENTAL METHODS OF CHEMICAL ANALYSIS",
+                "INTRODUCTION TO PETROCHEMICAL ENGINEERING","MOMENTUM TRANSFER LABORATORY","MOMENTUM TRANSFER",
+                "PHYSICAL, ORGANIC AND INORGANIC CHEMISTRY","TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES",
+        "Vyavaharika Kannada"};
     }
 
     private void Petrochem_Engineering_IV(){
-
+        subjectArr= new String[]{"ADDITIONAL MATHEMATICS – II","CHEMICAL ENGINEERING DRAWING LABORATORY","CHEMICAL ENGINEERING THERMODYNAMICS",
+        "COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS","CONSTITUTION OF INDIA, PROFESSIONAL ETHICS AND CYBER LAW (CPC)",
+                "HEAT TRANSFER LABORATORY","PETROLEUM REFINERY ENGINEERING","PROCESS HEAT TRANSFER","RENEWABLE ENERGY RESOURCES AND SYSTEMS",
+        "TECHNOLOGY OF INTERMEDIATE PETROCHEMICALS"};
     }
 
     private void Petrochem_Engineering_V(){
-
+        subjectArr= new String[]{"ENVIRONMENTAL STUDIES","FUNDAMENTALS OF PETROLEUM GEOLOGY","GEOLOGY LABORATORY",
+        "MANAGEMENT AND ENTREPRENEURSHIP","MASS TRANSFER OPERATIONS LABORATORY","MASS TRANSFER OPERATIONS",
+        "POLYMER SCIENCE AND TECHNOLOGY","RESERVOIR ENGINEERING","WELL DRILLING EQUIPMENT AND OPERATION"};
     }
 
     private void Petrochem_Engineering_VI(){
-
+        subjectArr= new String[]{"BIOCHEMICAL ENGINEERING","CHEMICAL REACTION ENGINEERING LABORATORY","CHEMICAL REACTION ENGINEERING",
+        "MATERIALS SCIENCE ENGINEERING","MINI-PROJECT","NATURAL GAS PROCESSING","PETROLEUM TESTING LABORATORY","PETROLEUM TRANSPORTATION ENGINEERING",
+        "PHARMACEUTICAL TECHNOLOGY","PROBABILITY AND STATISTICS","PROCESS EQUIPMENT DESIGN AND DRAWING","RESERVOIR ROCKS AND FLUID PROPERTIES"};
     }
 
     private void Petrochem_Engineering_VII(){
-
+        subjectArr= new String[]{"COMPUTER APPLICATIONS LABORATORY","ENVIRONMENTAL SCIENCE AND SOLID WASTE MANAGEMENT","GREEN CHEMISTRY",
+        "MODERN SEPARATION TECHNIQUES","ONSHORE AND OFFSHORE ENGINEERING AND TECHNOLOGY","OPTIMIZATION TECHNIQUES FOR PROCESS INDUSTRIES",
+        "PETROLEUM CORROSION TECHNOLOGY","PROCESS CONTROL AND INSTRUMENTATION","PROCESS CONTROL LABORATORY","PROCESS ENGINEERING AND PLANT DESIGN",
+        "PROCESS MODELING AND SIMULATION","PROFESSIONAL ETHICS IN ENGINEERING","PROJECT WORK PHASE-1","INTERNSHIP","RESEARCH METHODOLOGY"};
     }
 
     private void Petrochem_Engineering_VIII(){
-
+        subjectArr= new String[]{"PETROLEUM ECONOMICS","PILOT PLANT AND SCALE UP METHODS",
+        "PROJECT WORK PHASE-2","RISK ASSESSMENT AND SAFETY ENGINEERING","TRANSPORT PHENOMENA"};
     }
 }
