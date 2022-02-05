@@ -673,6 +673,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
        TextInputEditText[] editTextArr=new TextInputEditText[]{et1,et2,et3,et4,et5,et6,et7,et8,et9};
 
        for(int i=0;i<length;i++){
+
            etArr[i].setHint(subjectArr[i]);
        }
 

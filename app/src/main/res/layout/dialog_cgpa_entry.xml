@@ -36,8 +36,8 @@
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/backlitemodeanim"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +88,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et1"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="I Sem SGPA"
@@ -113,7 +113,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et2"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="II Sem SGPA"
@@ -149,7 +149,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et3"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="III Sem SGPA"
@@ -174,7 +174,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et4"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="IV Sem SGPA"
@@ -209,7 +209,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et5"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="V Sem SGPA"
@@ -234,7 +234,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et6"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
@@ -269,7 +269,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et7"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -294,7 +294,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et8"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="VIII Sem SGPA"

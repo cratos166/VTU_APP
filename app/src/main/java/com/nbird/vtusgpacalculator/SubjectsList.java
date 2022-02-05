@@ -241,7 +241,7 @@ public class SubjectsList {
     }
 
     private void ME_III(){
-        subjectArr= new String[]{"Mathematics", "Mechanics of Materials","Basic Thermodynamics","Material Science","Metal cutting and forming","Metal Casting and Welding","18ME36A Or 18ME36B","18MEL37A Or 18MEL37B","18MEL38A Or 18MEL38B","18KVK39/49 Or 18KAK39/49 Or 18CPC39"};
+        subjectArr= new String[]{"Mathematics", "Mechanics of Materials","Basic Thermodynamics","Material Science","18ME35A Or 18ME35B","18ME36A Or 18ME36B","18MEL37A Or 18MEL37B","18MEL38A Or 18MEL38B","18KVK39/49 Or 18KAK39/49 Or 18CPC39"};
         creditsArr=new int[]{3,4,3,3,3,3,2,2,1};
     }
 

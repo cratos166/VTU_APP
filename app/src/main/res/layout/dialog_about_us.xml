@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/dark_inner_3"
-            app:layout_constraintTop_toBottomOf="@+id/backlitemodeanim">
+            app:layout_constraintTop_toTopOf="parent">
 
 
 

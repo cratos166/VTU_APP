@@ -63,7 +63,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et1"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -83,9 +83,10 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
 
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et2"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -107,7 +108,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et3"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -129,7 +130,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et4"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -150,7 +151,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et5"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -172,7 +173,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et6"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -194,7 +195,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et7"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -216,7 +217,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et8"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColorHint="@color/dark_outer_box"
@@ -237,7 +238,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et9"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColorHint="@color/dark_outer_box"
