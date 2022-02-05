@@ -7,6 +7,8 @@ import android.app.Dialog;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -25,7 +27,7 @@ import java.net.URL;
 
 public class PDF_Activity extends AppCompatActivity {
     public final static String SCHEME_PATH="gs://vtu-sgpa-calculator.appspot.com/Scheme/";
-    public final static String PORTION_PATH="gs://vtu-sgpa-calculator.appspot.com/Portion";
+    public final static String PORTION_PATH="gs://vtu-sgpa-calculator.appspot.com/Portion/";
     PDFView pdfView;
     Dialog loadingDialog;
     String[] portionSubjectList={"Aeronautical Engineering","Aerospace Engineering","Architecture",
@@ -34,6 +36,7 @@ public class PDF_Activity extends AppCompatActivity {
     "Electronics & Telecommunication Engineering","Industrial & Production Engineering","Information Science & Engineering",
     "Manufacturing Science & Engineering","Marine Engineering","Mechanical Engineering","Mechatronics","Medical Electronics",
     "Mining Engineering","Nano Technology","Petrochem Engineering"};
+    androidx.appcompat.widget.Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,21 +52,41 @@ public class PDF_Activity extends AppCompatActivity {
         loadingDialog.show();
 
 
+        toolbar=findViewById(R.id.toolbar);
+
+
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
         Boolean isPortion=getIntent().getBooleanExtra("isPortion",false);
 
 
         String finalUrl="";
+
         if(isPortion){
             String subjectName=getIntent().getStringExtra("subjectName");
             int selectedBranch=getIntent().getIntExtra("selectedBranch",0);
             int selectedSem=getIntent().getIntExtra("selectedSem",0);
-            finalUrl=PORTION_PATH+portionSubjectList[selectedBranch]+"/"+selectedSem+"/"+subjectName+"("+selectedSem+")"+".pdf";
+            toolbar.setSubtitle(subjectName);
+            if(selectedBranch!=2&&(selectedSem==1||selectedSem==2)){
+                finalUrl=PORTION_PATH+"First Year/"+subjectName+".pdf";
+
+            }else{
+                finalUrl=PORTION_PATH+portionSubjectList[selectedBranch]+"/"+selectedSem+"/"+subjectName+"("+selectedSem+")"+".pdf";
+            }
+
         }else {
             String branchName=getIntent().getStringExtra("branchName");
+            toolbar.setSubtitle(branchName);
             finalUrl=SCHEME_PATH+branchName+".pdf";
         }
 
 
+        Log.d("PDF_ACTIVITY",finalUrl);
 
         StorageReference storageRef = FirebaseStorage.getInstance().getReferenceFromUrl(finalUrl);
         storageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -105,5 +128,15 @@ public class PDF_Activity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId()==android.R.id.home){
+            finish();
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
 
 }

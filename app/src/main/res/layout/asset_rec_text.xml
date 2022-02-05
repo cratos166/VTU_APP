@@ -34,7 +34,7 @@
             >
 
             <TextView
-                android:id="@+id/countryName"
+                android:id="@+id/head"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

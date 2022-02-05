@@ -42,12 +42,16 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHo
      String[] mData;
     int selectedBranch;
     int selectedSem;
+    AlertDialog alertDialog;
+    InterstitialAd mInterstitialAd;
 
-    public SubjectAdapter(Context mContext, String[] mData, int selectedBranch, int selectedSem) {
+    public SubjectAdapter(Context mContext, String[] mData, int selectedBranch, int selectedSem, AlertDialog alertDialog, InterstitialAd mInterstitialAd) {
         this.mContext = mContext;
         this.mData = mData;
         this.selectedBranch=selectedBranch;
         this.selectedSem=selectedSem;
+        this.alertDialog=alertDialog;
+        this.mInterstitialAd=mInterstitialAd;
     }
 
 
@@ -69,18 +73,40 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHo
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(mContext, PDF_Activity.class);
-                intent.putExtra("subjectName",mData[position]);
-                intent.putExtra("isPortion",true);
-                intent.putExtra("selectedBranch",selectedBranch);
-                intent.putExtra("selectedSem",selectedSem);
-                mContext.startActivity(intent);
+                mInterstitialAd.setAdListener(new AdListener(){
+                    public void onAdClosed(){
+                        super.onAdClosed();
+                        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+                        intentFunction(position);
+                    }
+
+                });
+
+
+                if(mInterstitialAd.isLoaded()){
+                    mInterstitialAd.show();
+                    return;
+                }
+                intentFunction(position);
             }
         });
 
 
     }
 
+    private void intentFunction(int position){
+
+        Intent intent=new Intent(mContext, PDF_Activity.class);
+        intent.putExtra("subjectName",mData[position]);
+        intent.putExtra("isPortion",true);
+        intent.putExtra("selectedBranch",selectedBranch);
+        intent.putExtra("selectedSem",selectedSem);
+        if(alertDialog.isShowing()){
+            alertDialog.dismiss();
+        }
+        mContext.startActivity(intent);
+
+    }
 
     @Override
     public int getItemCount() {

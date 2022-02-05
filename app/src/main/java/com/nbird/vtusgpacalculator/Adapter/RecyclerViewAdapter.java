@@ -76,11 +76,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
         holder.head.setText(mData.get(position).getTitle());
-//        try{
-//            holder.anim.setAnimation(mData.get(position).getThumbnail());
-//        }catch (Exception e){
-//          e.printStackTrace();
-//        }
+        try{
+            holder.anim.setAnimation(mData.get(position).getThumbnail());
+        }catch (Exception e){
+          e.printStackTrace();
+        }
 
         holder.dis.setText(mData.get(position).getDis());
 
@@ -101,7 +101,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         String[] semArr = {"I","II","III","IV","V","VI","VII","VIII"};
                         branchAndSemeterAlertDialog(v,branchArr,semArr,0);break;
                     case 1:
-                        String[] branchPortionArr = {"First Year", "Aeronautical Engineering", "Aerospace Engineering",
+                        String[] branchPortionArr = {"Aeronautical Engineering", "Aerospace Engineering",
                                 "Architecture", "Biomedical Engineering", "Biotechnology",
                                 "Chemical Engineering","Civil Engineering", "Computer Science & Engineering",
                                 "Electrical & Electronics Engineering", "Electronics & Communication Engineering",
@@ -171,13 +171,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         linearLayoutManager.setOrientation(recyclerViewSubjects.VERTICAL);
         recyclerViewSubjects.setLayoutManager(linearLayoutManager);
 
-
-        SubjectAdapter categoryAdapter = new SubjectAdapter(mContext,datasubjectAdder(selectedBranch,selectedSem),selectedBranch,selectedSem);
+        final AlertDialog alertDialog=builder.create();
+        SubjectAdapter categoryAdapter = new SubjectAdapter(mContext,datasubjectAdder(selectedBranch,selectedSem+1),selectedBranch,selectedSem+1,alertDialog,mInterstitialAd);
         recyclerViewSubjects.setAdapter(categoryAdapter);
 
 
 
-        final AlertDialog alertDialog=builder.create();
+
         if(alertDialog.getWindow()!=null){
             alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
         }
@@ -224,7 +224,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
         setModesList(branchList);
-        SchemeAdapter myAdapter=new SchemeAdapter(mContext,branchList);
+        SchemeAdapter myAdapter=new SchemeAdapter(mContext,branchList,alertDialog,mInterstitialAd);
         recyclerViewBranch.setLayoutManager(new GridLayoutManager(mContext,2));
         recyclerViewBranch.setAdapter(myAdapter);
 
@@ -603,7 +603,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                    marksEntryAlertDialog(v, selectedBranch[0], selectedSem[0]);
                }else if(flag==1){
                    portionSubjectsAlertDialog(v,selectedBranch[0], selectedSem[0]);
-                   Toast.makeText(mContext, "Working", Toast.LENGTH_SHORT).show();
                }
 
            }

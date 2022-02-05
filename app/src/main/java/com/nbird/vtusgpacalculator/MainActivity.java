@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     InterstitialAd mInterstitialAd;
-
+    androidx.appcompat.widget.Toolbar toolbar;
 
     private void loadAds(){
         mInterstitialAd = new InterstitialAd(MainActivity.this);
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         loadAds();
 
 
-
+        toolbar = findViewById(R.id.toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -71,6 +71,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
         recyclerView.setAdapter(myAdapter);
+
+
+        setSupportActionBar(toolbar);
+
+
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
