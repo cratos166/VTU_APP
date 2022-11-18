@@ -67,6 +67,42 @@
 
 
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:layout_gravity="center"
+                        android:text="Scheme"
+                        android:textColor="@color/text_dis"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+
+                    <Spinner
+                        android:id="@+id/spinnerScheme"
+                        style="@style/Widget.AppCompat.Light.DropDownItem.Spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:backgroundTint="@color/dark_border_stroke"
+                        android:focusable="true"
+                        android:layout_gravity="center"
+                        android:focusableInTouchMode="true"
+                        android:popupBackground="@color/dark_inner_box"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintCircleRadius="45dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Text1" />
+
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"

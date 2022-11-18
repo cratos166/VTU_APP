@@ -88,7 +88,6 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/et1"
-                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="I Sem SGPA"
@@ -106,7 +105,6 @@
                             android:singleLine="true"
                             android:maxLength="5"
                             android:textColor="@color/text_dis" />
-
 
                     </com.google.android.material.textfield.TextInputLayout>
 

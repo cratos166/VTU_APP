@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scaleY="0.9"
+    android:scaleX="0.9"
+    android:layout_margin="20dp"
+    android:padding="15dp"
+    android:background="@drawable/main_card_boarder"
+    android:id="@+id/layoutDialogContainer">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="122dp"
+            android:background="@drawable/dark_inner_3"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:gravity="left"
+                android:text="Select the scheme"
+                android:textColor="@color/text_head"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <Spinner
+                android:id="@+id/spinnerScheme"
+                style="@style/Widget.AppCompat.Light.DropDownItem.Spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:drawable/btn_dropdown"
+                android:backgroundTint="@color/dark_border_stroke"
+                android:focusable="true"
+                android:layout_gravity="center"
+                android:focusableInTouchMode="true"
+                android:popupBackground="@color/dark_inner_box"
+                android:spinnerMode="dropdown" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout3">
+
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/next_button"
+                android:elevation="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:gravity="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:text="NEXT"
+                android:textColor="@color/dark_back"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

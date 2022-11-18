@@ -28,6 +28,8 @@ import java.net.URL;
 public class PDF_Activity extends AppCompatActivity {
     public final static String SCHEME_PATH="gs://vtu-sgpa-calculator.appspot.com/Scheme/";
     public final static String PORTION_PATH="gs://vtu-sgpa-calculator.appspot.com/Portion/";
+    public final static  String SCHEME2021_PATH="gs://vtu-sgpa-calculator.appspot.com/Scheme2021/";
+    public final static String PORTION2021_PATH="gs://vtu-sgpa-calculator.appspot.com/Portion2021/";
     PDFView pdfView;
     Dialog loadingDialog;
     String[] portionSubjectList={"Aeronautical Engineering","Aerospace Engineering","Architecture",
@@ -81,8 +83,13 @@ public class PDF_Activity extends AppCompatActivity {
 
         }else {
             String branchName=getIntent().getStringExtra("branchName");
+            int scheme=getIntent().getIntExtra("scheme",0);
             toolbar.setSubtitle(branchName);
-            finalUrl=SCHEME_PATH+branchName+".pdf";
+            if(scheme==0) {
+                finalUrl = SCHEME_PATH + branchName + ".pdf";
+            } else {
+                finalUrl = SCHEME2021_PATH + branchName + ".pdf";
+            }
         }
 
 

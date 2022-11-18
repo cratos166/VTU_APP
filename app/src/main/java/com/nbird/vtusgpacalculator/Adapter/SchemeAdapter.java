@@ -27,12 +27,14 @@ public class SchemeAdapter extends RecyclerView.Adapter<SchemeAdapter.MyViewHold
     private List<SchemeHolder> mData;
     private AlertDialog alertDialog;
     private InterstitialAd mInterstitialAd;
+    private int scheme;
 
-    public SchemeAdapter(Context mContext, List<SchemeHolder> mData, AlertDialog alertDialog,InterstitialAd mInterstitialAd) {
+    public SchemeAdapter(Context mContext, List<SchemeHolder> mData, AlertDialog alertDialog,InterstitialAd mInterstitialAd,int scheme) {
         this.mContext = mContext;
         this.mData = mData;
         this.alertDialog=alertDialog;
         this.mInterstitialAd=mInterstitialAd;
+        this.scheme=scheme;
     }
 
 
@@ -84,6 +86,7 @@ public class SchemeAdapter extends RecyclerView.Adapter<SchemeAdapter.MyViewHold
 
         Intent intent=new Intent(mContext, PDF_Activity.class);
         intent.putExtra("branchName",mData.get(position).getText());
+        intent.putExtra("scheme",scheme);
         if(alertDialog.isShowing()){
             alertDialog.dismiss();
         }
