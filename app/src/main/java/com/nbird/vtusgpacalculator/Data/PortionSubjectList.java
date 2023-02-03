@@ -1009,18 +1009,26 @@ public class PortionSubjectList {
     }
 
     private void First_Year2021() {
-        subjectArr = new String[]{"Calculus & Differential Equations", "Engineering Physics", "Basic Electrical Engineering", "Elements Of Civil Engineering And Mechanics", "Engineering Visualization", "Engineering Physics Laboratory", "Basic Electrical Engineering Laboratory", "Communicative English", "Innovation and Design Thinking", "Advanced Calculus And Numerical Methods", "Engineering Chemistry", "Problem-Solving through Programming", "Basic Electronics & Communication Engineering", "Elements Of Mechanical Engineering", "Engineering Chemistry Laboratory", "Computer Programming Laboratory", "Professional Writing Skills in English", "Scientific Foundations of Health"};
+        subjectArr = new String[]{"Calculus & Differential Equations", "Engineering Physics", "Basic Electrical Engineering",
+                "Elements Of Civil Engineering And Mechanics", "Engineering Visualization", "Engineering Physics Laboratory",
+                "Basic Electrical Engineering Laboratory", "Communicative English", "Innovation and Design Thinking",
+                "Advanced Calculus And Numerical Methods", "Engineering Chemistry", "Problem-Solving through Programming",
+                "Basic Electronics & Communication Engineering", "Elements Of Mechanical Engineering", "Engineering Chemistry Laboratory",
+                "Computer Programming Laboratory", "Professional Writing Skills in English", "Scientific Foundations of Health"};
     }
 
     private void First_Year() {
-        subjectArr = new String[]{"Advance Calculus And Numerical Methods", "Basic Electrical Engineering", "Basic Electrical Lab", "Basic Electronics", "C Programming For Problem Solving",
-                "C Programming Lab", "Calculus And Linear Algebra", "Elements Of Civil Engineering And Mechanics", "Elements Of Mechanical Engineering", "Engineering Chemistry Lab", "Engineering Chemistry",
+        subjectArr = new String[]{"Advance Calculus And Numerical Methods", "Basic Electrical Engineering", "Basic Electrical Lab",
+                "Basic Electronics", "C Programming For Problem Solving", "C Programming Lab", "Calculus And Linear Algebra",
+                "Elements Of Civil Engineering And Mechanics", "Elements Of Mechanical Engineering", "Engineering Chemistry Lab", "Engineering Chemistry",
                 "Engineering Graphics", "Engineering Physics Lab", "Engineering Physics", "Technical English I", "Technical English II"};
     }
 
+    //todo "Mathematics Course","Social Connect and Responsibility", "Kannada"
     private void Aeronautical_Engineering_III2021() {
-        subjectArr = new String[]{"Mathematics Course", "Aircraft Materials and Processes(+Manufacturing Process Lab)", "Fluid Mechanics (+Fluid Mechanics Lab)", "Elements of Aeronautics (EoA)", "CAAD (Computer Aided Aircraft Drawing)", "Social Connect and Responsibility", "Kannada", "Ability Enhancement Course - III"};
+        subjectArr = new String[]{"Mathematics Course", "Aircraft Materials and Processes", "Fluid Mechanics", "Elements of Aeronautics", "Computer Aided Aircraft Drawing", "Social Connect and Responsibility", "Kannada",};
     }
+
 
 
     private void Aeronautical_Engineering_III() {
@@ -1030,8 +1038,9 @@ public class PortionSubjectList {
 
     }
 
+    //todo "MATHEMATICS IV","Mechanics of Materials","Biology For Engineers","Universal Human Values"
     private void Aeronautical_Engineering_IV2021() {
-        subjectArr = new String[]{"MATHEMATICS IV", "Aerodynamics (+ Aerodynamics lab)", "Mechanics of Materials", "Biology For Engineers", "Hydraulics and Pneumatics Systems Lab", "Kannada", "Ability Enhancement Course- IV", "Universal Human Values", "Inter/Intra Institutional Internship"};
+        subjectArr = new String[]{"MATHEMATICS IV", "Aerodynamics (+ Aerodynamics lab)", "Mechanics of Materials", "Biology For Engineers", "Hydraulics and Pneumatics Systems Lab", "Kannada", "Ability Enhancement Course- IV", "Universal Human Values"};
     }
 
     private void Aeronautical_Engineering_IV() {
@@ -1091,7 +1100,9 @@ public class PortionSubjectList {
     }
 
     private void Aerospace_Engineering_III2021() {
-        subjectArr = new String[]{"Mathematics Course", "Aerospace Materials and Processes(+ Manufacturing Process Lab)", "Fluid Mechanics (+ Fluid Mechanics Lab)", "Introduction to Aerospace Engineering (IAE)", "CAAD (Computer Aided Aircraft Drawing)", "Social Connect and Responsibility", "kannada", "Ability Enhancement Course - III"};
+        subjectArr = new String[]{"Mathematics Course", "Aerospace Materials and Processes(+ Manufacturing Process Lab)",
+                "Fluid Mechanics (+ Fluid Mechanics Lab)", "Introduction to Aerospace Engineering (IAE)", "CAAD (Computer Aided Aircraft Drawing)",
+                "Social Connect and Responsibility", "kannada", "Ability Enhancement Course - III"};
     }
 
     private void Aerospace_Engineering_III() {
@@ -1335,7 +1346,7 @@ public class PortionSubjectList {
     }
 
     private void Biotechnology_IV2021() {
-        subjectArr = new String[]{"Biostatistics and Design of experiments", "Python programming + lab", "Cell biology &Cell culture techniques + lab", "Molecular biology &Genetic engineering", "Biology for engineers", "Molecular biology &Genetic engineering lab", "Kannada", "Ability Enhancement Course- IV", "Universal Human Values", "Inter/Intra Institutional Internship"};
+        subjectArr = new String[]{"Biostatistics and Design of experiments", "Python programming + lab", "Cell biology &Cell culture techniques + lab", "Molecular biology & Genetic engineering", "Biology for engineers", "Molecular biology &Genetic engineering lab", "Kannada", "Ability Enhancement Course- IV", "Universal Human Values", "Inter/Intra Institutional Internship"};
     }
 
     private void Biotechnology_IV() {
