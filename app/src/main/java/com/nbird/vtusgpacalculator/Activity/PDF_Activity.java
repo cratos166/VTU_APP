@@ -71,14 +71,24 @@ public class PDF_Activity extends AppCompatActivity {
 
         if(isPortion){
             String subjectName=getIntent().getStringExtra("subjectName");
+            int selectedScheme=getIntent().getIntExtra("selectedScheme",0);
             int selectedBranch=getIntent().getIntExtra("selectedBranch",0);
             int selectedSem=getIntent().getIntExtra("selectedSem",0);
             toolbar.setSubtitle(subjectName);
-            if(selectedBranch!=2&&(selectedSem==1||selectedSem==2)){
-                finalUrl=PORTION_PATH+"First Year/"+subjectName+".pdf";
+            if(selectedScheme == 0) {
+                if (selectedBranch != 2 && (selectedSem == 1 || selectedSem == 2)) {
+                    finalUrl = PORTION_PATH + "First Year/" + subjectName + ".pdf";
 
-            }else{
-                finalUrl=PORTION_PATH+portionSubjectList[selectedBranch]+"/"+selectedSem+"/"+subjectName+"("+selectedSem+")"+".pdf";
+                } else {
+                    finalUrl = PORTION_PATH + portionSubjectList[selectedBranch] + "/" + selectedSem + "/" + subjectName + "(" + selectedSem + ")" + ".pdf";
+                }
+            } else {
+                if (selectedBranch != 2 && (selectedSem == 1 || selectedSem == 2)) {
+                    finalUrl = PORTION2021_PATH + "First Year/" + subjectName + ".pdf";
+
+                } else {
+                    finalUrl = PORTION2021_PATH + portionSubjectList[selectedBranch] + "/" + selectedSem + "/" + subjectName + "(" + selectedSem + ")" + ".pdf";
+                }
             }
 
         }else {

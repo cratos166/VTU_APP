@@ -97,7 +97,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 switch (position) {
                     case 0:
                         String[] branchArr2018 = {"CSE", "ISE", "ECE", "ME", "EEE", "ETE", "CIVIL", "BTE"};
-//                        String[] branchArr2021 = {"CSE", "ISE","AI", "ECE", "ME", "EEE", "ETE", "CIVIL","BTE"};
                         String[] semArr = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII"};
                         branchAndSemesterAlertDialog(v, scheme, branchArr2018, semArr, 0);
                         break;
@@ -161,7 +160,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-    private void portionSubjectsAlertDialog(View v, int selectedScheme,int selectedBranch, int selectedSem) {
+    private void portionSubjectsAlertDialog(View v, int selectedScheme, int selectedBranch, int selectedSem) {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext, R.style.AlertDialogTheme);
 
         final View view1 = LayoutInflater.from(mContext).inflate(R.layout.dialog_scheme_list, (ConstraintLayout) v.findViewById(R.id.layoutDialogContainer));
@@ -176,7 +175,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         recyclerViewSubjects.setLayoutManager(linearLayoutManager);
 
         final AlertDialog alertDialog = builder.create();
-        SubjectAdapter categoryAdapter = new SubjectAdapter(mContext, datasubjectAdder(selectedScheme,selectedBranch, selectedSem + 1), selectedBranch, selectedSem + 1, alertDialog, mInterstitialAd);
+        SubjectAdapter categoryAdapter = new SubjectAdapter(mContext, datasubjectAdder(selectedScheme, selectedBranch, selectedSem + 1), selectedScheme, selectedBranch, selectedSem + 1, alertDialog, mInterstitialAd);
         recyclerViewSubjects.setAdapter(categoryAdapter);
 
 
@@ -193,40 +192,40 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-    private String[] datasubjectAdder(int selectedScheme,int selectedBranch, int selectedSem) {
+    private String[] datasubjectAdder(int selectedScheme, int selectedBranch, int selectedSem) {
 
-        PortionSubjectList portionSubjectList = new PortionSubjectList(selectedScheme,selectedSem, selectedBranch);
+        PortionSubjectList portionSubjectList = new PortionSubjectList(selectedScheme, selectedSem, selectedBranch);
 
         return portionSubjectList.getSubjectArr();
 
     }
 
-    private void selectSchemeView(View v){
+    private void selectSchemeView(View v) {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(mContext,R.style.AlertDialogTheme);
+        AlertDialog.Builder builder = new AlertDialog.Builder(mContext, R.style.AlertDialogTheme);
 
-        final View view1=LayoutInflater.from(mContext).inflate(R.layout.dialog_scheme,v.findViewById(R.id.layoutDialogContainer));
+        final View view1 = LayoutInflater.from(mContext).inflate(R.layout.dialog_scheme, v.findViewById(R.id.layoutDialogContainer));
 
         builder.setView(view1);
         builder.setCancelable(true);
 
 
-        Spinner schemeSpinner= (Spinner) view1.findViewById(R.id.spinnerScheme);
+        Spinner schemeSpinner = (Spinner) view1.findViewById(R.id.spinnerScheme);
 
-        String[] schemeArr={"2018","2021"};
-        int[] selectedScheme={0};
+        String[] schemeArr = {"2018", "2021"};
+        int[] selectedScheme = {0};
 
-        ArrayAdapter<String> schemeAdapter =new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, schemeArr);
+        ArrayAdapter<String> schemeAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, schemeArr);
 
         schemeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         schemeSpinner.setAdapter(schemeAdapter);
 
 
-        schemeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+        schemeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                selectedScheme[0]=position;
+                selectedScheme[0] = position;
             }
 
             @Override
@@ -246,18 +245,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
 
-        Button submit=view1.findViewById(R.id.submitButton);
+        Button submit = view1.findViewById(R.id.submitButton);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 alertDialog.cancel();
-                schemeListView(v,selectedScheme[0]);
+                schemeListView(v, selectedScheme[0]);
             }
         });
     }
 
 
-    private void schemeListView(View v,int scheme) {
+    private void schemeListView(View v, int scheme) {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext, R.style.AlertDialogTheme);
 
         final View view1 = LayoutInflater.from(mContext).inflate(R.layout.dialog_scheme_list, (ConstraintLayout) v.findViewById(R.id.layoutDialogContainer));
@@ -277,19 +276,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         } catch (Exception e) {
 
         }
-        if(scheme==0){
+        if (scheme == 0) {
             setModesList(branchList);
         } else {
             setModesList2021(branchList);
         }
 
-        SchemeAdapter myAdapter = new SchemeAdapter(mContext, branchList, alertDialog, mInterstitialAd,scheme);
+        SchemeAdapter myAdapter = new SchemeAdapter(mContext, branchList, alertDialog, mInterstitialAd, scheme);
         recyclerViewBranch.setLayoutManager(new GridLayoutManager(mContext, 2));
         recyclerViewBranch.setAdapter(myAdapter);
 
     }
 
-    private void setModesList2021(List<SchemeHolder> modesList){
+    private void setModesList2021(List<SchemeHolder> modesList) {
         modesList.add(new SchemeHolder(R.drawable.first_year, "First Year"));
         modesList.add(new SchemeHolder(R.drawable.physics_cycle, "Engineering Physics Lab"));
         modesList.add(new SchemeHolder(R.drawable.lab, "Engineering Chemistry Lab"));
@@ -578,7 +577,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 } else if (i == 1) {
                     String[] branchArr = {"CSE", "ISE", "ECE", "ME", "EEE", "ETE", "CIVIL", "BTE"};
                     String[] semArr = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII"};
-                    branchAndSemesterAlertDialog(v, scheme,branchArr, semArr, 0);
+                    branchAndSemesterAlertDialog(v, scheme, branchArr, semArr, 0);
                 }
             }
         });
@@ -605,7 +604,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private void branchAndSemesterAlertDialog(View v, String[] schemeArr, String[] branchArr, String[] semArr, int flag) {
 
 
-        int[] selectedScheme={0};
+        int[] selectedScheme = {0};
         int[] selectedBranch = {0};
         int[] selectedSem = {0};
 
@@ -617,13 +616,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         builder.setCancelable(true);
 
 
-        Spinner spinnerScheme= (Spinner) view1.findViewById(R.id.spinnerScheme);
+        Spinner spinnerScheme = (Spinner) view1.findViewById(R.id.spinnerScheme);
         Spinner spinnerBranch = (Spinner) view1.findViewById(R.id.spinnerBranch);
         Spinner spinnerSem = (Spinner) view1.findViewById(R.id.spinnerSem);
         Button nextButton = (Button) view1.findViewById(R.id.nextButton);
 
 
-        ArrayAdapter<String> schemeAdapter =new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, schemeArr);
+        ArrayAdapter<String> schemeAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, schemeArr);
         ArrayAdapter<String> branchAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, branchArr);
         ArrayAdapter<String> semAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, semArr);
 
@@ -631,11 +630,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         spinnerScheme.setAdapter(schemeAdapter);
 
 
-        spinnerScheme.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+        spinnerScheme.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                selectedScheme[0]=position;
+                selectedScheme[0] = position;
             }
 
             @Override
@@ -689,9 +688,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 alertDialog.cancel();
                 if (flag == 0) {
-                    marksEntryAlertDialog(v, selectedScheme[0],selectedBranch[0], selectedSem[0]);
+                    marksEntryAlertDialog(v, selectedScheme[0], selectedBranch[0], selectedSem[0]);
                 } else if (flag == 1) {
-                    portionSubjectsAlertDialog(v, selectedScheme[0],selectedBranch[0], selectedSem[0]);
+                    portionSubjectsAlertDialog(v, selectedScheme[0], selectedBranch[0], selectedSem[0]);
                 }
 
             }
@@ -700,7 +699,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-    private void marksEntryAlertDialog(View v, int selectedScheme,int selectedBranch, int selectedSem) {
+    private void marksEntryAlertDialog(View v, int selectedScheme, int selectedBranch, int selectedSem) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext, R.style.AlertDialogTheme);
 
@@ -746,15 +745,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
        CIVIL=6
        BTE=7    */
 
+        if (selectedScheme == 1) {
 
-        Log.v("Scheme is ", "scheme = "+selectedScheme);
-        if(selectedScheme==1){
-
-            SubjectsList2021 subjectsList2021= new SubjectsList2021(selectedSem,selectedBranch);
+            SubjectsList2021 subjectsList2021 = new SubjectsList2021(selectedSem, selectedBranch);
             subjectsList2021.start();
 
-            subjectArr=subjectsList2021.getSubjectArr();
-            creditsArr=subjectsList2021.getSemsArr();
+            subjectArr = subjectsList2021.getSubjectArr();
+            creditsArr = subjectsList2021.getSemsArr();
 
         } else {
 

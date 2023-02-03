@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,20 +39,23 @@ import com.nbird.vtusgpacalculator.SubjectsList;
 import java.util.List;
 
 public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHolder> {
-     Context mContext;
-     String[] mData;
+    Context mContext;
+    String[] mData;
     int selectedBranch;
     int selectedSem;
+
+    int selectedScheme;
     AlertDialog alertDialog;
     InterstitialAd mInterstitialAd;
 
-    public SubjectAdapter(Context mContext, String[] mData, int selectedBranch, int selectedSem, AlertDialog alertDialog, InterstitialAd mInterstitialAd) {
+    public SubjectAdapter(Context mContext, String[] mData, int selectedScheme, int selectedBranch, int selectedSem, AlertDialog alertDialog, InterstitialAd mInterstitialAd) {
         this.mContext = mContext;
         this.mData = mData;
-        this.selectedBranch=selectedBranch;
-        this.selectedSem=selectedSem;
-        this.alertDialog=alertDialog;
-        this.mInterstitialAd=mInterstitialAd;
+        this.selectedScheme = selectedScheme;
+        this.selectedBranch = selectedBranch;
+        this.selectedSem = selectedSem;
+        this.alertDialog = alertDialog;
+        this.mInterstitialAd = mInterstitialAd;
     }
 
 
@@ -73,8 +77,8 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHo
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mInterstitialAd.setAdListener(new AdListener(){
-                    public void onAdClosed(){
+                mInterstitialAd.setAdListener(new AdListener() {
+                    public void onAdClosed() {
                         super.onAdClosed();
                         mInterstitialAd.loadAd(new AdRequest.Builder().build());
                         intentFunction(position);
@@ -83,7 +87,7 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHo
                 });
 
 
-                if(mInterstitialAd.isLoaded()){
+                if (mInterstitialAd.isLoaded()) {
                     mInterstitialAd.show();
                     return;
                 }
@@ -94,14 +98,15 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHo
 
     }
 
-    private void intentFunction(int position){
+    private void intentFunction(int position) {
 
-        Intent intent=new Intent(mContext, PDF_Activity.class);
-        intent.putExtra("subjectName",mData[position]);
-        intent.putExtra("isPortion",true);
-        intent.putExtra("selectedBranch",selectedBranch);
-        intent.putExtra("selectedSem",selectedSem);
-        if(alertDialog.isShowing()){
+        Intent intent = new Intent(mContext, PDF_Activity.class);
+        intent.putExtra("selectedScheme", selectedScheme);
+        intent.putExtra("subjectName", mData[position]);
+        intent.putExtra("isPortion", true);
+        intent.putExtra("selectedBranch", selectedBranch);
+        intent.putExtra("selectedSem", selectedSem);
+        if (alertDialog.isShowing()) {
             alertDialog.dismiss();
         }
         mContext.startActivity(intent);
