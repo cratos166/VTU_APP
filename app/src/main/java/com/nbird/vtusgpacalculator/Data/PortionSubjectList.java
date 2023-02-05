@@ -1040,7 +1040,7 @@ public class PortionSubjectList {
 
     //todo "MATHEMATICS IV","Mechanics of Materials","Biology For Engineers","Universal Human Values"
     private void Aeronautical_Engineering_IV2021() {
-        subjectArr = new String[]{"MATHEMATICS IV", "Aerodynamics (+ Aerodynamics lab)", "Mechanics of Materials", "Biology For Engineers", "Hydraulics and Pneumatics Systems Lab", "Kannada", "Ability Enhancement Course- IV", "Universal Human Values"};
+        subjectArr = new String[]{"MATHEMATICS IV", "Aerodynamics (+ Aerodynamics lab)", "Mechanics of Materials", "Biology For Engineers", "Hydraulics and Pneumatics System Lab", "Kannada", "Ability Enhancement Course - IV", "Universal Human Values"};
     }
 
     private void Aeronautical_Engineering_IV() {
