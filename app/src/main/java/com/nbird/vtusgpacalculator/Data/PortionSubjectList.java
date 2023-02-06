@@ -1118,7 +1118,7 @@ public class PortionSubjectList {
 
     //todo MATHEMATICS IV Kannada/Constitution of India
     private void Aerospace_Engineering_IV2021() {
-        subjectArr = new String[]{"MATHEMATICS IV", "Aerodynamics (+ Aerodynamics lab)", "Aero Engineering Thermodynamics ( + Energy Conversion+ Heat & Mass Transfer Labs)", "Mechanics of Materials", "Biology For Engineers", "Propulsion Lab", "Constitution of India","Ability Enhancement Course - IV","Design Thinking for Innovation","HIGH TEMPERATURE AND SMART MATERIALS","INTRODUCTION TO SPACE TECHNOLOGY"};
+        subjectArr = new String[]{"MATHEMATICS IV", "Aerodynamics (+ Aerodynamics lab)", "Aero Engineering Thermodynamics ( + Energy Conversion+ Heat & Mass Transfer Labs)", "Mechanics of Materials", "Biology For Engineers", "PROPULSION LAB", "Constitution of India","Ability Enhancement Course - IV","Design Thinking for Innovation","HIGH TEMPERATURE AND SMART MATERIALS","INTRODUCTION TO SPACE TECHNOLOGY"};
     }
 
     //todo //todo aerospace rest not available
@@ -1171,6 +1171,7 @@ public class PortionSubjectList {
     }
 
 
+    //todo architecture left
     private void Architecture_I2021() {
         subjectArr = new String[]{"Architectural Design-I", "Materials & Methods in Building Construction-I", "Architectural Graphics-I ", "14 History of Architecture-I ", "Basic Design & Visual Arts A", "Model Making Workshop ", "Innovation and Design Thinking", "Communicative English"};
     }
@@ -1254,7 +1255,7 @@ public class PortionSubjectList {
     }
 
     private void Architecture_VIII2021() {
-        subjectArr = new String[]{"Professional Training*"};
+        subjectArr = new String[]{"Professional Training"};
     }
 
     private void Architecture_VIII() {

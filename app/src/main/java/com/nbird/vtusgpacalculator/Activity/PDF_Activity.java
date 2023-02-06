@@ -74,6 +74,7 @@ public class PDF_Activity extends AppCompatActivity {
             int selectedScheme=getIntent().getIntExtra("selectedScheme",0);
             int selectedBranch=getIntent().getIntExtra("selectedBranch",0);
             int selectedSem=getIntent().getIntExtra("selectedSem",0);
+            Log.v("Pdf","name "+subjectName+" scheme "+selectedScheme+" branch"+selectedBranch+" sem"+selectedSem);
             toolbar.setSubtitle(subjectName);
             if(selectedScheme == 0) {
                 if (selectedBranch != 2 && (selectedSem == 1 || selectedSem == 2)) {
@@ -87,7 +88,7 @@ public class PDF_Activity extends AppCompatActivity {
                     finalUrl = PORTION2021_PATH + "First Year/" + subjectName + ".pdf";
 
                 } else {
-                    finalUrl = PORTION2021_PATH + portionSubjectList[selectedBranch] + "/" + selectedSem + "/" + subjectName + "(" + selectedSem + ")" + ".pdf";
+                    finalUrl = PORTION2021_PATH + portionSubjectList[selectedBranch] + "/" + selectedSem + "/" + subjectName+ ".pdf";
                 }
             }
 
