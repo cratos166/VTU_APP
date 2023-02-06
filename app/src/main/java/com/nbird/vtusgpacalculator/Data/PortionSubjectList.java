@@ -1049,6 +1049,7 @@ public class PortionSubjectList {
                 "MATERIAL TESTING LAB", "MEASUREMENTS AND METROLOGY LAB", "Mechanisms and Machine Theory", "Turbomachines"};
     }
 
+    //todo aero rest not available
     private void Aeronautical_Engineering_V2021() {
         subjectArr = new String[]{"Mechanism and Machine Theory", "Aircraft Propulsion (Propulsion Lab)", "Aero structures", "Aircraft Performance and Stability", "Advanced Aircraft Structures Lab", "Research Methodology Intellectual Property Rights", "Environmental Studies", "Ability Enhancement Course-V"};
     }
@@ -1060,6 +1061,7 @@ public class PortionSubjectList {
                 "THEORY OF VIBRATIONS"};
     }
 
+    //todo aero rest not available
     private void Aeronautical_Engineering_VI2021() {
         subjectArr = new String[]{"Aviation Management", "Aircraft Systems and Avionics", "Gas Turbine Technology",
                 "Flight Vehicle Design", "Computational Fluid Flow and Heat Transfer", "Composite Materials and Structures",
@@ -1075,6 +1077,7 @@ public class PortionSubjectList {
                 "GAS TURBINE TECHNOLOGY", "HISTORY OF FLIGHT & TECHNOLOGY FORECAST", "NUMERICAL METHODS"};
     }
 
+    //todo aero rest not available
     private void Aeronautical_Engineering_VII2021() {
         subjectArr = new String[]{"Conjugate Heat Transfer(CHT)", "Control Engineering", "Wind Tunnel Techniques", "Heat and Mass Transfer",
                 "Helicopter Dynamics", "AI and ML for Aerospace Applications", "Flight Testing", "Space Mechanics", "Theory of Aircraft Vibrations",
@@ -1099,10 +1102,11 @@ public class PortionSubjectList {
                 "HELICOPTER DYNAMICS"};
     }
 
+    //todo Social Connect and Responsibility kannada
     private void Aerospace_Engineering_III2021() {
         subjectArr = new String[]{"Mathematics Course", "Aerospace Materials and Processes(+ Manufacturing Process Lab)",
-                "Fluid Mechanics (+ Fluid Mechanics Lab)", "Introduction to Aerospace Engineering (IAE)", "CAAD (Computer Aided Aircraft Drawing)",
-                "Social Connect and Responsibility", "kannada", "Ability Enhancement Course - III"};
+                "Fluid Mechanics (+ Fluid Mechanics Lab)", "INTRODUCTION TO AEROSPACE ENGINEERING", "COMPUTER AIDED AIRCRAFT DRAWING",
+                "Social Connect and Responsibility", "kannada", "Ability Enhancement Course- III","Digitalization in Aeronautics","Coding Literacy"};
     }
 
     private void Aerospace_Engineering_III() {
