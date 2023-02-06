@@ -1116,8 +1116,9 @@ public class PortionSubjectList {
                 "SATELLITE COMMUNICATION", "TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES", "Vyavaharika Kannada"};
     }
 
+    //todo MATHEMATICS IV Kannada/Constitution of India
     private void Aerospace_Engineering_IV2021() {
-        subjectArr = new String[]{"MATHEMATICS IV", "Aerodynamics (+ Aerodynamics lab)", "Aero Engineering Thermodynamics ( + Energy Conversion+ Heat & Mass Transfer Labs)", "Mechanics of Materials", "Biology For Engineers", "Propulsion Lab", "Kannada/Constitution of India"};
+        subjectArr = new String[]{"MATHEMATICS IV", "Aerodynamics (+ Aerodynamics lab)", "Aero Engineering Thermodynamics ( + Energy Conversion+ Heat & Mass Transfer Labs)", "Mechanics of Materials", "Biology For Engineers", "Propulsion Lab", "Constitution of India","Ability Enhancement Course - IV","Design Thinking for Innovation","HIGH TEMPERATURE AND SMART MATERIALS","INTRODUCTION TO SPACE TECHNOLOGY"};
     }
 
     private void Aerospace_Engineering_IV() {
