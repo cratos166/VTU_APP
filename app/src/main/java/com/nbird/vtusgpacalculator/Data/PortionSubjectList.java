@@ -1121,6 +1121,7 @@ public class PortionSubjectList {
         subjectArr = new String[]{"MATHEMATICS IV", "Aerodynamics (+ Aerodynamics lab)", "Aero Engineering Thermodynamics ( + Energy Conversion+ Heat & Mass Transfer Labs)", "Mechanics of Materials", "Biology For Engineers", "Propulsion Lab", "Constitution of India","Ability Enhancement Course - IV","Design Thinking for Innovation","HIGH TEMPERATURE AND SMART MATERIALS","INTRODUCTION TO SPACE TECHNOLOGY"};
     }
 
+    //todo //todo aerospace rest not available
     private void Aerospace_Engineering_IV() {
         subjectArr = new String[]{"AEROSPACE STRUCTURES – I", "Aerodynamics-I", "COMPLEX ANALYSIS, PROBABILITY AND STATISTICAL METHODS",
                 "COMPOSITE MATERIALS", "COMPUTER AIDED AIRCRAFT DRAWING", "ENERGY CONVERSION AND FLUID MECHANICS LAB", "INTRODUCTION TO SPACE TECHNOLOGY",
