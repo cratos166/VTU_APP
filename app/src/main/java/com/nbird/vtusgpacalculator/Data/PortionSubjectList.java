@@ -1265,10 +1265,11 @@ public class PortionSubjectList {
                 "URBAN PLANNING"};
     }
 
+    //todo Social Connect and Responsibility Ability Enhancement Course - III
     private void Biomedical_Engineering_III2021() {
         subjectArr = new String[]{"Transform Calculus, Fourier Series and Numerical Techniques", "Analog Electronic Circuits",
                 "Digital Design and HDL", "Instrumentation, Measurements and Biomedical Transducers", "Measurement and Biomedical Transducers Lab",
-                "Social Connect and Responsibility", "Kannada/Constitution", "Ability Enhancement Course - III"};
+                "Social Connect and Responsibility", "Kannada/Constitution", "Ability Enhancement Course - III","AEC LAB USING PSPICEMULTISIM"};
     }
 
 
@@ -1279,10 +1280,11 @@ public class PortionSubjectList {
                 "Network Analysis", "TRANSFORM CALCULUS, FOURIER SERIES AND NUMERICAL TECHNIQUES", "Vyavaharika Kannada"};
     }
 
+    //todo Complex Analysis
     private void Biomedical_Engineering_IV2021() {
         subjectArr = new String[]{"Complex Analysis, Probability and Statistical Methods", "Embedded Controllers", "Java Programming", "Signal Conditioning and Data Acquisition Circuits",
                 "Biology For Engineers", "Signal Conditioning and Data Acquisition Circuits Lab", "Kannada/Constitution", "Ability Enhancement Course- IV", "Universal Human Values", "Universal Human Values",
-                "Inter/Intra Institutional Internship"};
+                "Inter/Intra Institutional Internship","SIGNAL CONDITIONING LAB USING PSPICE  MULTISIM"};
     }
 
     private void Biomedical_Engineering_IV() {
